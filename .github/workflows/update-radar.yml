@@ -1,0 +1,48 @@
+name: Refresh RepoPulse radar data
+
+on:
+  schedule:
+    - cron: '0 21 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: radar-data-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Refresh radar data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run radar:update
+
+      - name: Commit refreshed snapshot
+        shell: bash
+        run: |
+          if git diff --quiet -- public/data/repositories.json docs/data/repositories.json; then
+            echo "No radar data changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/repositories.json docs/data/repositories.json
+          git commit -m "data: refresh RepoPulse radar"
+          git push
