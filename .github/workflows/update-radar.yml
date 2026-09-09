@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: radar-data-refresh
+  group: radar-data-write
   cancel-in-progress: false
 
 jobs:

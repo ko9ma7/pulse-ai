@@ -6,6 +6,10 @@
   const state = {
     data: null,
     archive: null,
+    backfill: null,
+    backfillLoaded: false,
+    historicalOffset: '0',
+    historicalMetric: 'star7d',
     period: '7d',
     timelinePeriod: '30d',
     detailPeriod: '30d',
@@ -46,6 +50,7 @@
     if(h==='#/timeline') return {name:'timeline'};
     if(h==='#/categories') return {name:'categories'};
     if(h==='#/archive') return {name:'archive'};
+    if(h==='#/historical') return {name:'historical'};
     if(h==='#/watchlist') return {name:'watchlist'};
     if(h==='#/methodology') return {name:'methodology'};
     return {name:'home'};
@@ -66,6 +71,7 @@
       ['timeline','#/timeline','⌁','Timeline'],
       ['categories','#/categories','▦','Categories'],
       ['archive','#/archive','◷','Archive'],
+      ['historical','#/historical','↶','Backfill 1Y'],
       ['watchlist','#/watchlist','☆','Watchlist'],
       ['methodology','#/methodology','∑','Methodology'],
     ];
@@ -74,7 +80,7 @@
       <nav class="sidebar-nav">${nav.map(([key,href,mark,label])=>`<a class="nav-item ${active===key?'active':''}" href="${href}"><span>${mark}</span>${label}</a>`).join('')}
         <button class="nav-item" id="themeToggle">${theme()==='dark'?'☀ Light mode':'☾ Dark mode'}</button>
       </nav>
-      <div class="sidebar-foot"><div class="sidebar-note">자동 수집: <strong>6시간 간격</strong><br>장기 Archive: <strong>최대 730일</strong><br>Repo Star History: <strong>최대 1년</strong></div></div>
+      <div class="sidebar-foot"><div class="sidebar-note">자동 수집: <strong>6시간 간격</strong><br>장기 Archive: <strong>최대 730일</strong><br>Reconstructed Backfill: <strong>1년</strong><br>Repo Star History: <strong>최대 1년</strong></div></div>
     </aside>
     <main class="main"><header class="mobile-header"><a class="brand" href="#/" style="padding:0"><span class="brand-mark">${icon('pulse')}</span>RepoPulse <b>AI</b></a><button id="menuBtn" aria-label="메뉴 열기">${icon('menu')}</button></header>${content}</main>`;
   }
@@ -151,7 +157,7 @@
     }).join('');
     return shell(`<section class="page">
       <div class="hero"><div><h1>Today's Fastest Rising <span>AI Repositories</span></h1><p>현재 화면은 스트리밍 실시간 피드가 아니라 GitHub Actions가 주기적으로 갱신하는 정적 스냅샷입니다. 최신 랭킹은 6시간마다 자동 수집되고, Timeline과 Archive에는 장기 기록이 누적됩니다.</p></div><div class="freshness"><i class="status-dot"></i><div><strong>Latest radar snapshot</strong><span>${freshnessText(d.generatedAt)} · 자동 6시간</span></div></div></div>
-      <div class="quick-tabs"><a href="#/timeline">⌁ 주·월·년 Timeline</a><a href="#/categories">▦ 카테고리 비교</a><a href="#/archive">◷ 누적 Archive</a><a href="https://github.com/ko9ma7/pulse-ai/actions/workflows/update-radar.yml" target="_blank" rel="noreferrer">↻ 데이터 수집 Action</a><button id="browserRefresh">↻ 화면 다시 읽기</button></div>
+      <div class="quick-tabs"><a href="#/timeline">⌁ 주·월·년 Timeline</a><a href="#/categories">▦ 카테고리 비교</a><a href="#/archive">◷ 누적 Archive</a><a href="#/historical">↶ 1년 Backfill</a><a href="https://github.com/ko9ma7/pulse-ai/actions/workflows/update-radar.yml" target="_blank" rel="noreferrer">↻ 데이터 수집 Action</a><button id="browserRefresh">↻ 화면 다시 읽기</button></div>
       <div class="summary">${statCard('Scanned repositories',fmt.format(d.summary.scannedRepositories),'후보 탐색')}${statCard('Qualified signals',fmt.format(d.summary.qualifiedRepositories),'signal ≥ 65')}${statCard('Average signal',fmt.format(d.summary.averageSignal),'현재 후보 평균')}${statCard('Fastest 24H',esc(d.summary.fastest24hRepo||'—'),'24시간 관측')}</div>
       <div class="panel"><div class="toolbar"><div>${periodButtons(state.period,'period')}</div><div class="tools"><label class="search"><input id="search" value="${esc(state.query)}" placeholder="Repository / topic 검색"></label><label class="sort"><select id="sort"><option value="signal" ${state.sort==='signal'?'selected':''}>Signal</option><option value="growth" ${state.sort==='growth'?'selected':''}>Growth</option><option value="accel" ${state.sort==='accel'?'selected':''}>Acceleration</option><option value="stars" ${state.sort==='stars'?'selected':''}>Stars</option></select></label></div></div>
       <div class="categories">${CATEGORIES.map(c=>`<button class="${state.category===c?'active':''}" data-cat="${esc(c)}">${esc(c)}</button>`).join('')}</div>
@@ -205,6 +211,59 @@
       <div class="analytics-grid"><div class="content wide"><h2>Category heatmap</h2><p class="muted-copy">색의 강도는 현재 후보군에서 해당 기간 Star 증가량의 상대 크기입니다.</p><div class="heatmap"><div></div>${heatPeriods.map(p=>`<b>${periodLabel(p)}</b>`).join('')}${heatRows.map(row=>`<strong>${esc(row.category)}</strong>${row.vals.map(v=>`<span style="--heat:${(v/heatMax).toFixed(3)};--heat-pct:${(v/heatMax*100).toFixed(1)}%" title="${fmt.format(v)}">${fmt.format(v)}</span>`).join('')}`).join('')}</div></div>
       <div class="content"><h2>${periodLabel(state.timelinePeriod)} category ranking</h2><div class="mini-list">${stats.map(s=>`<button data-category-jump="${esc(s.category)}"><span>${esc(s.category)}</span><strong>+${fmt.format(s.growth)}</strong></button>`).join('')}</div></div></div>
     </section>`,'categories');
+  }
+
+
+  function nearestHistoricalSnapshot(offsetWeeks){
+    const snaps=state.backfill?.snapshots||[];
+    if(!snaps.length)return null;
+    const target=Date.now()-Number(offsetWeeks||0)*7*86400000;
+    return [...snaps].sort((a,b)=>Math.abs(new Date(a.at)-target)-Math.abs(new Date(b.at)-target))[0]||snaps.at(-1);
+  }
+
+  function historicalSeries(){
+    const snaps=state.backfill?.snapshots||[];
+    return snaps.map(s=>{
+      const rows=state.category==='All'?(s.leaders||[]):(s.categories?.[state.category]||[]);
+      const value=state.historicalMetric==='momentum'
+        ? (rows.length?Math.round(rows.reduce((sum,r)=>sum+safeNum(r.momentumScore),0)/rows.length):0)
+        : state.historicalMetric==='repos' ? rows.length
+        : rows.reduce((sum,r)=>sum+safeNum(r.star7d),0);
+      return {date:String(s.at||'').slice(0,10),value};
+    });
+  }
+
+  function historicalPage(){
+    if(!state.backfillLoaded){
+      state.backfillLoaded=true;
+      fetch('./data/historical-backfill.json',{cache:'no-store'})
+        .then(r=>r.ok?r.json():null)
+        .then(data=>{state.backfill=data;render();})
+        .catch(()=>{state.backfill=null;render();});
+      return shell(`<section class="page"><div class="loading-screen embedded"><strong>1년 Backfill 데이터를 불러오는 중입니다.</strong><span>대용량 이력은 Historical 탭을 열 때만 지연 로드합니다.</span></div></section>`,'historical');
+    }
+    const b=state.backfill;
+    const has=Boolean(b?.snapshots?.length);
+    if(!has){
+      return shell(`<section class="page"><div class="hero"><div><h1>Historical <span>Backfill</span></h1><p>GitHub 공식 Star History를 이용해 지난 1년의 성장 모멘텀을 역산하는 영역입니다. 아직 첫 백필 Action 결과가 저장되지 않았습니다.</p></div></div><div class="archive-start"><strong>1년 백필이 아직 없습니다.</strong><span>Actions에서 Backfill 1 year of RepoPulse history를 한 번 실행하면 이후 이 화면에서 과거 주차별 랭킹을 볼 수 있습니다.</span></div><div class="quick-tabs"><a href="https://github.com/ko9ma7/pulse-ai/actions/workflows/backfill-year.yml" target="_blank" rel="noreferrer">↻ 1년 Backfill Action 실행</a><a href="./data/historical-backfill.json" download>↓ Backfill JSON</a></div></section>`,'historical');
+    }
+    const snap=nearestHistoricalSnapshot(state.historicalOffset);
+    const rows=state.category==='All'?(snap?.leaders||[]):(snap?.categories?.[state.category]||[]);
+    const series=historicalSeries();
+    const top=rows[0];
+    const metricLabel=state.historicalMetric==='momentum'?'Average historical momentum':state.historicalMetric==='repos'?'Ranked repositories':'Top-cohort 7D star gains';
+    const ranked=rows.slice(0,30).map((r,i)=>`<div class="history-row historical-row"><button data-open="${esc(r.fullName)}"><span class="rank">#${i+1}</span><strong>${esc(r.fullName)}</strong></button><span>${(r.categories||[]).map(c=>`<i>${esc(c)}</i>`).join('')}</span><b>+${fmt.format(r.star7d)}</b><em>${safeNum(r.acceleration).toFixed(2)}x</em><strong>${fmt.format(r.momentumScore)}</strong></div>`).join('');
+    const backfilled=fmt.format(b.summary?.repositoriesBackfilled||0);
+    const weekly=fmt.format(b.summary?.weeklySnapshots||0);
+    return shell(`<section class="page"><div class="hero"><div><h1>Historical <span>Backfill</span></h1><p>현재 Radar 관측 이전의 공백을 GitHub 공식 Star History로 재구성합니다. 이 순위는 과거의 실제 RepoPulse 관측값이 아니라 당시 Star 속도·가속도·프로젝트 신선도를 이용한 <strong>Reconstructed Momentum</strong>입니다.</p></div><div class="freshness"><i class="status-dot"></i><div><strong>Official GitHub Star History</strong><span>${backfilled} repos · ${weekly} weekly snapshots</span></div></div></div>
+      <div class="quick-tabs"><a href="./data/historical-backfill.json" download>↓ Backfill JSON</a><a href="https://github.com/ko9ma7/pulse-ai/actions/workflows/backfill-year.yml" target="_blank" rel="noreferrer">↻ Backfill 다시 실행</a><a href="#/archive">◷ 실제 관측 Archive</a></div>
+      <div class="summary">${statCard('Selected date',String(snap?.at||'').slice(0,10),'reconstructed weekly')}${statCard('Backfilled repos',backfilled,'current + historical discovery')}${statCard('7D gain',`+${fmt.format(snap?.star7d||0)}`,'selected reconstructed cohort')}${statCard('Top momentum',top?`${top.momentumScore} · ${esc(top.fullName)}`:'—','not live Early Signal')}</div>
+      <div class="analysis-toolbar"><div class="periods">${[['0','Latest'],['4','1M ago'],['13','3M ago'],['26','6M ago'],['52','1Y ago']].map(([k,l])=>`<button class="${state.historicalOffset===k?'active':''}" data-history-offset="${k}">${l}</button>`).join('')}</div><div class="view-switch"><button class="${state.historicalMetric==='star7d'?'active':''}" data-history-metric="star7d">7D Star</button><button class="${state.historicalMetric==='momentum'?'active':''}" data-history-metric="momentum">Momentum</button><button class="${state.historicalMetric==='repos'?'active':''}" data-history-metric="repos">Repo Count</button></div></div>
+      <div class="categories">${CATEGORIES.map(c=>`<button class="${state.category===c?'active':''}" data-cat="${esc(c)}">${esc(c)}</button>`).join('')}</div>
+      <div class="analytics-grid"><div class="content wide"><div class="section-head"><div><h2>${metricLabel}</h2><p>${state.category==='All'?'All AI categories':esc(state.category)} · weekly reconstruction</p></div></div>${lineChart(series,'value',metricLabel)}</div><div class="content"><h2>What this data means</h2><div class="data-policy"><span><b>Observed</b>: RepoPulse가 실제 6시간마다 저장한 Archive</span><span><b>Reconstructed</b>: GitHub Star History를 이용해 과거 성장률을 역산</span><span><b>Deep discovery</b>: 과거 시장 전체 후보군은 GH Archive BigQuery로 추가 보강 가능</span></div></div></div>
+      <div class="panel"><div class="table-title"><h2>${String(snap?.at||'').slice(0,10)} reconstructed ranking</h2><span>7D gain · acceleration · momentum</span></div>${ranked||'<div class="empty">이 시점/카테고리에 백필된 Repository가 없습니다.</div>'}</div>
+      <div class="archive-start"><strong>정확도 표시</strong><span>${esc(b.source?.note||'Historical Momentum is reconstructed from GitHub Star History.')}</span></div>
+    </section>`,'historical');
   }
 
   function archiveBucketKey(iso, granularity){
@@ -299,7 +358,7 @@
 
   function methodology(){
     const rows=[['35%','7일 Star 증가속도','총 Star 수보다 최근 성장 속도를 우선합니다.'],['20%','증가 가속도','이전 7일 대비 최근 7일 증가 속도 변화를 반영합니다.'],['15%','최근 활동','Commit, Push, Release 등 프로젝트 활동성을 반영합니다.'],['10%','프로젝트 신선도','새 프로젝트의 빠른 성장을 초기 신호로 높게 평가합니다.'],['10%','README/메타데이터','설명, 토픽, 라이선스 등 공개 메타데이터 완성도를 반영합니다.'],['10%','직접 테스트 가능성','설치와 재현이 쉬운지를 평가합니다.']];
-    return shell(`<section class="page method"><h1>Early Signal Score</h1><p>RepoPulse는 “가장 유명한 저장소”가 아니라 “지금 막 커지는 저장소”를 찾습니다. 데이터는 실시간 스트리밍이 아니라 6시간 주기의 GitHub Actions 스냅샷입니다.</p><div class="data-policy"><strong>데이터 계층</strong><span>Latest snapshot: 현재 랭킹</span><span>GitHub Star History: Repository별 최대 1년 일별 이력</span><span>Radar Archive: RepoPulse가 실제 관측한 6시간/일별 누적 기록</span><span>Daily Archive 보존: 최대 730일</span></div><div class="formula">${rows.map(([w,t,p])=>`<div class="formula-row"><strong>${w}</strong><h2>${t}</h2><p>${p}</p></div>`).join('')}</div></section>`,'methodology');
+    return shell(`<section class="page method"><h1>Early Signal Score</h1><p>RepoPulse는 “가장 유명한 저장소”가 아니라 “지금 막 커지는 저장소”를 찾습니다. 데이터는 실시간 스트리밍이 아니라 6시간 주기의 GitHub Actions 스냅샷입니다.</p><div class="data-policy"><strong>데이터 계층</strong><span>Latest snapshot: 현재 랭킹</span><span>GitHub Star History: Repository별 최대 1년 일별 이력</span><span>Radar Archive: RepoPulse가 실제 관측한 6시간/일별 누적 기록</span><span>Historical Backfill: GitHub 공식 Star History로 과거 최대 1년 성장 모멘텀 재구성</span><span>GH Archive: WatchEvent 기반 과거 시장 후보군 심화 발굴용 선택 데이터원</span><span>Daily Archive 보존: 최대 730일</span></div><div class="formula">${rows.map(([w,t,p])=>`<div class="formula-row"><strong>${w}</strong><h2>${t}</h2><p>${p}</p></div>`).join('')}</div></section>`,'methodology');
   }
 
   function exportCsv(){
@@ -313,7 +372,7 @@
   function render(){
     if(!state.data)return;
     const r=route();
-    app.innerHTML = r.name==='repo'?detail(r.fullName):r.name==='timeline'?timelinePage():r.name==='categories'?categoriesPage():r.name==='archive'?archivePage():r.name==='watchlist'?watchlistPage():r.name==='methodology'?methodology():dashboard();
+    app.innerHTML = r.name==='repo'?detail(r.fullName):r.name==='timeline'?timelinePage():r.name==='categories'?categoriesPage():r.name==='archive'?archivePage():r.name==='historical'?historicalPage():r.name==='watchlist'?watchlistPage():r.name==='methodology'?methodology():dashboard();
     bind();
   }
 
@@ -322,12 +381,14 @@
     document.getElementById('menuBtn')?.addEventListener('click',()=>{state.mobile=!state.mobile;render();});
     document.getElementById('browserRefresh')?.addEventListener('click',()=>location.reload());
     document.getElementById('csvExport')?.addEventListener('click',exportCsv);
-    document.querySelectorAll('[data-period]').forEach(b=>b.addEventListener('click',()=>{state.period=b.dataset.period;render();}));
+    document.querySelectorAll('[data-period]').forEach(b=>b.addEventListener('click',()=>{state.period=b.dataset.period;state.sort='growth';render();}));
     document.querySelectorAll('[data-timeline-period]').forEach(b=>b.addEventListener('click',()=>{state.timelinePeriod=b.dataset.timelinePeriod;render();}));
     document.querySelectorAll('[data-detail-period]').forEach(b=>b.addEventListener('click',()=>{state.detailPeriod=b.dataset.detailPeriod;render();}));
     document.querySelectorAll('[data-detail-mode]').forEach(b=>b.addEventListener('click',()=>{state.detailMode=b.dataset.detailMode;render();}));
     document.querySelectorAll('[data-archive-granularity]').forEach(b=>b.addEventListener('click',()=>{state.archiveGranularity=b.dataset.archiveGranularity;render();}));
     document.querySelectorAll('[data-archive-metric]').forEach(b=>b.addEventListener('click',()=>{state.archiveMetric=b.dataset.archiveMetric;render();}));
+    document.querySelectorAll('[data-history-offset]').forEach(b=>b.addEventListener('click',()=>{state.historicalOffset=b.dataset.historyOffset;render();}));
+    document.querySelectorAll('[data-history-metric]').forEach(b=>b.addEventListener('click',()=>{state.historicalMetric=b.dataset.historyMetric;render();}));
     document.querySelectorAll('[data-cat]').forEach(b=>b.addEventListener('click',()=>{state.category=b.dataset.cat;render();}));
     document.querySelectorAll('[data-category-jump]').forEach(b=>b.addEventListener('click',()=>{state.category=b.dataset.categoryJump; location.hash='#/';}));
     document.querySelectorAll('[data-open]').forEach(b=>b.addEventListener('click',()=>location.hash='#/repo/'+encodeURIComponent(b.dataset.open)));

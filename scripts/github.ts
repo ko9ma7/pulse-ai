@@ -43,11 +43,20 @@ async function request<T>(url: string, allow404 = false): Promise<T | null> {
   return response.json() as Promise<T>;
 }
 
-export async function searchRepositories(query: string): Promise<GitHubRepo[]> {
-  const params = new URLSearchParams({ q: query, sort: 'updated', order: 'desc', per_page: '12' });
+export async function searchRepositories(
+  query: string,
+  options: { sort?: 'updated' | 'stars'; order?: 'asc' | 'desc'; perPage?: number } = {},
+): Promise<GitHubRepo[]> {
+  const params = new URLSearchParams({
+    q: query,
+    sort: options.sort ?? 'updated',
+    order: options.order ?? 'desc',
+    per_page: String(Math.min(100, Math.max(1, options.perPage ?? 12))),
+  });
   const result = await request<SearchResponse>(`https://api.github.com/search/repositories?${params}`);
   return result?.items ?? [];
 }
+
 
 // The Star History endpoint returns weekly buckets. Two pages x 30 weeks gives
 // enough daily points for a one-year view while staying comfortably within the

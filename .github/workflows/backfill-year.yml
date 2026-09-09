@@ -1,0 +1,58 @@
+name: Backfill 1 year of RepoPulse history
+
+on:
+  workflow_dispatch:
+    inputs:
+      months:
+        description: 'Months of GitHub Star History to reconstruct'
+        required: true
+        default: '12'
+      max_repos:
+        description: 'Maximum repositories to backfill (60-300)'
+        required: true
+        default: '180'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: radar-data-write
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Reconstruct historical Star momentum
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BACKFILL_MONTHS: ${{ inputs.months }}
+          BACKFILL_MAX_REPOS: ${{ inputs.max_repos }}
+        run: npm run radar:backfill
+
+      - name: Commit reconstructed history
+        shell: bash
+        run: |
+          if git diff --quiet -- public/data/historical-backfill.json docs/data/historical-backfill.json; then
+            echo "No historical backfill changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/historical-backfill.json docs/data/historical-backfill.json
+          git commit -m "data: backfill one year of reconstructed star history"
+          git push

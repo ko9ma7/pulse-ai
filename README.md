@@ -99,3 +99,31 @@ GitHub Token, PAT, 비밀번호는 프로젝트 파일에 저장하지 않습니
 ## License
 
 MIT
+
+## 1-year historical backfill
+
+This release adds a separate **Reconstructed Backfill** data layer so you do not need to wait a year for RepoPulse's own observed archive to grow.
+
+### Automatic path
+
+1. Run `SAFE-PUBLISH.cmd`.
+2. It uploads the new workflow and then requests `Backfill 1 year of RepoPulse history` with `months=12` and `max_repos=180`.
+3. Wait for the workflow to finish, then open `https://ko9ma7.github.io/pulse-ai/#/historical`.
+
+If the workflow is not started automatically, run `BACKFILL-1YEAR.cmd` or open GitHub Actions and manually run `backfill-year.yml`.
+
+### What is reconstructed
+
+The backfill uses GitHub's privacy-safe repository Star History endpoint (`GET /repos/{owner}/{repo}/stargazers/history`) and reconstructs weekly historical momentum from daily star gains. It seeds the cohort with today's Radar repositories and supplements it with AI repositories created during the requested historical window. The UI intentionally labels this **Historical Momentum**, not Early Signal, because old release/commit/README state cannot be reconstructed reliably from Star History alone.
+
+The generated file is `docs/data/historical-backfill.json` (mirrored at `public/data/historical-backfill.json`). It contains repository daily history and weekly reconstructed rankings for All AI and each RepoPulse category.
+
+### Optional deeper discovery with GH Archive
+
+`analytics/gharchive_backfill.sql` is included for a broader historical census. GH Archive records the public GitHub event timeline and exposes it through BigQuery. `WatchEvent` can be aggregated as historical star events to discover repositories that trended in the past but are absent from today's Radar/search cohort. This optional route requires a Google Cloud BigQuery project and is not needed for the first 12-month backfill.
+
+References:
+- GitHub Star History API: https://docs.github.com/en/rest/activity/starring
+- GitHub changelog (2026-09-04): https://github.blog/changelog/2026-09-04-new-api-endpoint-provides-privacy-safe-star-history-data/
+- GH Archive: https://www.gharchive.org/
+- BigQuery public datasets: https://docs.cloud.google.com/bigquery/public-data

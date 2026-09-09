@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": null,
+  "range": { "months": 12, "start": null, "end": null },
+  "source": {
+    "type": "github-star-history-reconstruction",
+    "apiVersion": "2026-03-10",
+    "endpoint": "GET /repos/{owner}/{repo}/stargazers/history",
+    "cohort": "pending first backfill",
+    "note": "Run the Backfill 1 year of RepoPulse history workflow once."
+  },
+  "limitations": [],
+  "summary": { "candidatesDiscovered": 0, "repositoriesBackfilled": 0, "weeklySnapshots": 0 },
+  "snapshots": [],
+  "repositories": []
+}
