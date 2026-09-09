@@ -19,6 +19,8 @@ export function historyMetrics(stars: number, weeks: StarWeek[]) {
     .sort((a, b) => a.date.localeCompare(b.date));
 
   const unique = [...new Map(daily.map((point) => [point.date, point])).values()];
+  const recent365 = unique.slice(-365);
+  const recent90 = unique.slice(-90);
   const recent30 = unique.slice(-30);
   const recent7 = unique.slice(-7);
   const previous7 = unique.slice(-14, -7);
@@ -26,14 +28,16 @@ export function historyMetrics(stars: number, weeks: StarWeek[]) {
   const star7d = recent7.reduce((sum, point) => sum + point.gained, 0);
   const starPrev7d = previous7.reduce((sum, point) => sum + point.gained, 0);
   const star30d = recent30.reduce((sum, point) => sum + point.gained, 0);
+  const star90d = recent90.reduce((sum, point) => sum + point.gained, 0);
+  const star365d = recent365.reduce((sum, point) => sum + point.gained, 0);
   const velocity7d = stars > 0 ? (star7d / stars) * 100 : 0;
   const acceleration = (star7d + 5) / (starPrev7d + 5);
-  let running = Math.max(0, stars - star30d);
-  const history: TrendPoint[] = recent30.map((point) => {
+  let running = Math.max(0, stars - star365d);
+  const history: TrendPoint[] = recent365.map((point) => {
     running += point.gained;
     return { ...point, total: running };
   });
-  return { star24h, star7d, starPrev7d, star30d, velocity7d, acceleration, history };
+  return { star24h, star7d, starPrev7d, star30d, star90d, star365d, velocity7d, acceleration, history };
 }
 
 function activityScore(repo: GitHubRepo, release: Release | null) {

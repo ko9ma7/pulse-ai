@@ -49,9 +49,17 @@ export async function searchRepositories(query: string): Promise<GitHubRepo[]> {
   return result?.items ?? [];
 }
 
+// The Star History endpoint returns weekly buckets. Two pages x 30 weeks gives
+// enough daily points for a one-year view while staying comfortably within the
+// normal GitHub Actions API budget.
 export async function getStarHistory(fullName: string): Promise<StarWeek[]> {
-  const result = await request<StarWeek[]>(`https://api.github.com/repos/${fullName}/stargazers/history?per_page=8&page=1`);
-  return result ?? [];
+  const pages = await Promise.all([1, 2].map(async (page) => {
+    const result = await request<StarWeek[]>(
+      `https://api.github.com/repos/${fullName}/stargazers/history?per_page=30&page=${page}`,
+    );
+    return result ?? [];
+  }));
+  return pages.flat();
 }
 
 export async function getLatestRelease(fullName: string): Promise<Release | null> {

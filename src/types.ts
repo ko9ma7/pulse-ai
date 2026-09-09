@@ -38,6 +38,8 @@ export type RepoPulseRepository = {
   star7d: number;
   starPrev7d: number;
   star30d: number;
+  star90d: number;
+  star365d: number;
   velocity7d: number;
   acceleration: number;
   freshnessDays: number;

@@ -2,7 +2,8 @@ name: Refresh RepoPulse radar data
 
 on:
   schedule:
-    - cron: '0 21 * * *'
+    # Every six hours. The non-zero minute avoids the busiest cron boundary.
+    - cron: '17 */6 * * *'
   workflow_dispatch:
 
 permissions:
@@ -15,6 +16,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,20 +31,24 @@ jobs:
       - name: Install dependencies
         run: npm install --no-audit --no-fund
 
-      - name: Refresh radar data
+      - name: Refresh latest radar and cumulative archive
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run radar:update
 
-      - name: Commit refreshed snapshot
+      - name: Commit refreshed data
         shell: bash
         run: |
-          if git diff --quiet -- public/data/repositories.json docs/data/repositories.json; then
+          if git diff --quiet -- \
+            public/data/repositories.json docs/data/repositories.json \
+            public/data/radar-history.json docs/data/radar-history.json; then
             echo "No radar data changes to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/data/repositories.json docs/data/repositories.json
-          git commit -m "data: refresh RepoPulse radar"
+          git add \
+            public/data/repositories.json docs/data/repositories.json \
+            public/data/radar-history.json docs/data/radar-history.json
+          git commit -m "data: refresh radar and cumulative history"
           git push

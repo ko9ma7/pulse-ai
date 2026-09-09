@@ -1,4 +1,4 @@
-import { Activity, ArrowDownUp, Clock3, Database, RefreshCw, Search, Sparkles } from 'lucide-react';
+import { ArrowDownUp, Clock3, Search, Sparkles } from 'lucide-react';
 import { useMemo, useState, type ChangeEvent } from 'react';
 import type { RadarCategory, RadarData, RepoPulseRepository, WatchRecord } from '../../types';
 import { RepoRow } from './RepoRow';
@@ -44,16 +44,10 @@ export function Dashboard({ data, watchlist, onToggleWatch }: {
         </div>
         <div className="freshness-box">
           <span className={`status-dot ${data.source.mode}`} />
-          <div><strong>{data.source.mode === 'live' ? 'Live radar data' : 'Demo snapshot'}</strong><span><Clock3 size={13} /> {relativeTime(data.generatedAt)} 갱신</span></div>
+          <div><strong>Latest radar snapshot</strong><span><Clock3 size={13} /> {relativeTime(data.generatedAt)} 갱신</span></div>
         </div>
       </section>
 
-      {data.source.mode === 'demo' && (
-        <div className="notice-banner">
-          <Database size={18} />
-          <div><strong>현재 번들 데모 데이터입니다.</strong><span>GitHub Actions의 “Refresh radar & deploy”를 실행하면 실제 GitHub Star History 데이터로 자동 교체됩니다.</span></div>
-        </div>
-      )}
 
       <section className="summary-strip" aria-label="Radar 요약">
         <div><span>분석 후보</span><strong>{formatNumber(data.summary.scannedRepositories)}</strong><small>repos scanned</small></div>

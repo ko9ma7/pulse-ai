@@ -1,0 +1,486 @@
+{
+  "schemaVersion": 2,
+  "trackingStartedAt": "2026-09-09T03:00:00.000Z",
+  "updatedAt": "2026-09-09T03:00:00.000Z",
+  "cadenceHours": 6,
+  "intradayRetentionDays": 30,
+  "dailyRetentionDays": 730,
+  "snapshots": [
+    {
+      "at": "2026-09-09T03:00:00.000Z",
+      "summary": {
+        "repositories": 8,
+        "qualifiedRepositories": 8,
+        "averageSignal": 84,
+        "star24h": 1363,
+        "star7d": 4421,
+        "fastest24hRepo": "signal-labs/agent-grid"
+      },
+      "categories": {
+        "Agent": {
+          "repositories": 3,
+          "totalStars": 5280,
+          "star24h": 704,
+          "star7d": 2282,
+          "star30d": 3882,
+          "star90d": 3882,
+          "star365d": 3882,
+          "averageSignal": 91,
+          "averageAcceleration": 2.27,
+          "leader": "signal-labs/agent-grid"
+        },
+        "MCP": {
+          "repositories": 1,
+          "totalStars": 1834,
+          "star24h": 229,
+          "star7d": 744,
+          "star30d": 1267,
+          "star90d": 1267,
+          "star365d": 1267,
+          "averageSignal": 91,
+          "averageAcceleration": 2.27,
+          "leader": "contextworks/mcp-bridge"
+        },
+        "Coding": {
+          "repositories": 1,
+          "totalStars": 965,
+          "star24h": 135,
+          "star7d": 436,
+          "star30d": 741,
+          "star90d": 741,
+          "star365d": 741,
+          "averageSignal": 88,
+          "averageAcceleration": 2.26,
+          "leader": "flowstate-dev/vibe-runner"
+        },
+        "LLM": {
+          "repositories": 0,
+          "totalStars": 0,
+          "star24h": 0,
+          "star7d": 0,
+          "star30d": 0,
+          "star90d": 0,
+          "star365d": 0,
+          "averageSignal": 0,
+          "averageAcceleration": 0,
+          "leader": null
+        },
+        "Local AI": {
+          "repositories": 1,
+          "totalStars": 1420,
+          "star24h": 160,
+          "star7d": 518,
+          "star30d": 881,
+          "star90d": 881,
+          "star365d": 881,
+          "averageSignal": 86,
+          "averageAcceleration": 2.26,
+          "leader": "openlocal-lab/pocket-llm"
+        },
+        "RAG": {
+          "repositories": 1,
+          "totalStars": 722,
+          "star24h": 86,
+          "star7d": 281,
+          "star30d": 477,
+          "star90d": 477,
+          "star365d": 477,
+          "averageSignal": 82,
+          "averageAcceleration": 2.23,
+          "leader": "retrieval-kit/rag-mini"
+        },
+        "Computer Use": {
+          "repositories": 1,
+          "totalStars": 1188,
+          "star24h": 106,
+          "star7d": 344,
+          "star30d": 584,
+          "star90d": 584,
+          "star365d": 584,
+          "averageSignal": 80,
+          "averageAcceleration": 2.27,
+          "leader": "screenpilot-ai/computer-use-kit"
+        },
+        "AI Image": {
+          "repositories": 1,
+          "totalStars": 3160,
+          "star24h": 187,
+          "star7d": 604,
+          "star30d": 1026,
+          "star90d": 1026,
+          "star365d": 1026,
+          "averageSignal": 78,
+          "averageAcceleration": 2.26,
+          "leader": "latent-studio/image-pipe"
+        },
+        "AI Video": {
+          "repositories": 1,
+          "totalStars": 2080,
+          "star24h": 120,
+          "star7d": 392,
+          "star30d": 666,
+          "star90d": 666,
+          "star365d": 666,
+          "averageSignal": 75,
+          "averageAcceleration": 2.26,
+          "leader": "motionfoundry/video-lab"
+        }
+      },
+      "repositories": [
+        {
+          "fullName": "signal-labs/agent-grid",
+          "stars": 2481,
+          "star24h": 340,
+          "star7d": 1102,
+          "star30d": 1874,
+          "star90d": 1874,
+          "star365d": 1874,
+          "signal": 94,
+          "acceleration": 2.28,
+          "categories": [
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "contextworks/mcp-bridge",
+          "stars": 1834,
+          "star24h": 229,
+          "star7d": 744,
+          "star30d": 1267,
+          "star90d": 1267,
+          "star365d": 1267,
+          "signal": 91,
+          "acceleration": 2.27,
+          "categories": [
+            "MCP",
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "flowstate-dev/vibe-runner",
+          "stars": 965,
+          "star24h": 135,
+          "star7d": 436,
+          "star30d": 741,
+          "star90d": 741,
+          "star365d": 741,
+          "signal": 88,
+          "acceleration": 2.26,
+          "categories": [
+            "Coding",
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "openlocal-lab/pocket-llm",
+          "stars": 1420,
+          "star24h": 160,
+          "star7d": 518,
+          "star30d": 881,
+          "star90d": 881,
+          "star365d": 881,
+          "signal": 86,
+          "acceleration": 2.26,
+          "categories": [
+            "Local AI"
+          ]
+        },
+        {
+          "fullName": "retrieval-kit/rag-mini",
+          "stars": 722,
+          "star24h": 86,
+          "star7d": 281,
+          "star30d": 477,
+          "star90d": 477,
+          "star365d": 477,
+          "signal": 82,
+          "acceleration": 2.23,
+          "categories": [
+            "RAG"
+          ]
+        },
+        {
+          "fullName": "screenpilot-ai/computer-use-kit",
+          "stars": 1188,
+          "star24h": 106,
+          "star7d": 344,
+          "star30d": 584,
+          "star90d": 584,
+          "star365d": 584,
+          "signal": 80,
+          "acceleration": 2.27,
+          "categories": [
+            "Computer Use"
+          ]
+        },
+        {
+          "fullName": "latent-studio/image-pipe",
+          "stars": 3160,
+          "star24h": 187,
+          "star7d": 604,
+          "star30d": 1026,
+          "star90d": 1026,
+          "star365d": 1026,
+          "signal": 78,
+          "acceleration": 2.26,
+          "categories": [
+            "AI Image"
+          ]
+        },
+        {
+          "fullName": "motionfoundry/video-lab",
+          "stars": 2080,
+          "star24h": 120,
+          "star7d": 392,
+          "star30d": 666,
+          "star90d": 666,
+          "star365d": 666,
+          "signal": 75,
+          "acceleration": 2.26,
+          "categories": [
+            "AI Video"
+          ]
+        }
+      ]
+    }
+  ],
+  "daily": [
+    {
+      "at": "2026-09-09T03:00:00.000Z",
+      "summary": {
+        "repositories": 8,
+        "qualifiedRepositories": 8,
+        "averageSignal": 84,
+        "star24h": 1363,
+        "star7d": 4421,
+        "fastest24hRepo": "signal-labs/agent-grid"
+      },
+      "categories": {
+        "Agent": {
+          "repositories": 3,
+          "totalStars": 5280,
+          "star24h": 704,
+          "star7d": 2282,
+          "star30d": 3882,
+          "star90d": 3882,
+          "star365d": 3882,
+          "averageSignal": 91,
+          "averageAcceleration": 2.27,
+          "leader": "signal-labs/agent-grid"
+        },
+        "MCP": {
+          "repositories": 1,
+          "totalStars": 1834,
+          "star24h": 229,
+          "star7d": 744,
+          "star30d": 1267,
+          "star90d": 1267,
+          "star365d": 1267,
+          "averageSignal": 91,
+          "averageAcceleration": 2.27,
+          "leader": "contextworks/mcp-bridge"
+        },
+        "Coding": {
+          "repositories": 1,
+          "totalStars": 965,
+          "star24h": 135,
+          "star7d": 436,
+          "star30d": 741,
+          "star90d": 741,
+          "star365d": 741,
+          "averageSignal": 88,
+          "averageAcceleration": 2.26,
+          "leader": "flowstate-dev/vibe-runner"
+        },
+        "LLM": {
+          "repositories": 0,
+          "totalStars": 0,
+          "star24h": 0,
+          "star7d": 0,
+          "star30d": 0,
+          "star90d": 0,
+          "star365d": 0,
+          "averageSignal": 0,
+          "averageAcceleration": 0,
+          "leader": null
+        },
+        "Local AI": {
+          "repositories": 1,
+          "totalStars": 1420,
+          "star24h": 160,
+          "star7d": 518,
+          "star30d": 881,
+          "star90d": 881,
+          "star365d": 881,
+          "averageSignal": 86,
+          "averageAcceleration": 2.26,
+          "leader": "openlocal-lab/pocket-llm"
+        },
+        "RAG": {
+          "repositories": 1,
+          "totalStars": 722,
+          "star24h": 86,
+          "star7d": 281,
+          "star30d": 477,
+          "star90d": 477,
+          "star365d": 477,
+          "averageSignal": 82,
+          "averageAcceleration": 2.23,
+          "leader": "retrieval-kit/rag-mini"
+        },
+        "Computer Use": {
+          "repositories": 1,
+          "totalStars": 1188,
+          "star24h": 106,
+          "star7d": 344,
+          "star30d": 584,
+          "star90d": 584,
+          "star365d": 584,
+          "averageSignal": 80,
+          "averageAcceleration": 2.27,
+          "leader": "screenpilot-ai/computer-use-kit"
+        },
+        "AI Image": {
+          "repositories": 1,
+          "totalStars": 3160,
+          "star24h": 187,
+          "star7d": 604,
+          "star30d": 1026,
+          "star90d": 1026,
+          "star365d": 1026,
+          "averageSignal": 78,
+          "averageAcceleration": 2.26,
+          "leader": "latent-studio/image-pipe"
+        },
+        "AI Video": {
+          "repositories": 1,
+          "totalStars": 2080,
+          "star24h": 120,
+          "star7d": 392,
+          "star30d": 666,
+          "star90d": 666,
+          "star365d": 666,
+          "averageSignal": 75,
+          "averageAcceleration": 2.26,
+          "leader": "motionfoundry/video-lab"
+        }
+      },
+      "repositories": [
+        {
+          "fullName": "signal-labs/agent-grid",
+          "stars": 2481,
+          "star24h": 340,
+          "star7d": 1102,
+          "star30d": 1874,
+          "star90d": 1874,
+          "star365d": 1874,
+          "signal": 94,
+          "acceleration": 2.28,
+          "categories": [
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "contextworks/mcp-bridge",
+          "stars": 1834,
+          "star24h": 229,
+          "star7d": 744,
+          "star30d": 1267,
+          "star90d": 1267,
+          "star365d": 1267,
+          "signal": 91,
+          "acceleration": 2.27,
+          "categories": [
+            "MCP",
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "flowstate-dev/vibe-runner",
+          "stars": 965,
+          "star24h": 135,
+          "star7d": 436,
+          "star30d": 741,
+          "star90d": 741,
+          "star365d": 741,
+          "signal": 88,
+          "acceleration": 2.26,
+          "categories": [
+            "Coding",
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "openlocal-lab/pocket-llm",
+          "stars": 1420,
+          "star24h": 160,
+          "star7d": 518,
+          "star30d": 881,
+          "star90d": 881,
+          "star365d": 881,
+          "signal": 86,
+          "acceleration": 2.26,
+          "categories": [
+            "Local AI"
+          ]
+        },
+        {
+          "fullName": "retrieval-kit/rag-mini",
+          "stars": 722,
+          "star24h": 86,
+          "star7d": 281,
+          "star30d": 477,
+          "star90d": 477,
+          "star365d": 477,
+          "signal": 82,
+          "acceleration": 2.23,
+          "categories": [
+            "RAG"
+          ]
+        },
+        {
+          "fullName": "screenpilot-ai/computer-use-kit",
+          "stars": 1188,
+          "star24h": 106,
+          "star7d": 344,
+          "star30d": 584,
+          "star90d": 584,
+          "star365d": 584,
+          "signal": 80,
+          "acceleration": 2.27,
+          "categories": [
+            "Computer Use"
+          ]
+        },
+        {
+          "fullName": "latent-studio/image-pipe",
+          "stars": 3160,
+          "star24h": 187,
+          "star7d": 604,
+          "star30d": 1026,
+          "star90d": 1026,
+          "star365d": 1026,
+          "signal": 78,
+          "acceleration": 2.26,
+          "categories": [
+            "AI Image"
+          ]
+        },
+        {
+          "fullName": "motionfoundry/video-lab",
+          "stars": 2080,
+          "star24h": 120,
+          "star7d": 392,
+          "star30d": 666,
+          "star90d": 666,
+          "star365d": 666,
+          "signal": 75,
+          "acceleration": 2.26,
+          "categories": [
+            "AI Video"
+          ]
+        }
+      ]
+    }
+  ]
+}
