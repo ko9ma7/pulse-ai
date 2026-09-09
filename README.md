@@ -127,3 +127,11 @@ References:
 - GitHub changelog (2026-09-04): https://github.blog/changelog/2026-09-04-new-api-endpoint-provides-privacy-safe-star-history-data/
 - GH Archive: https://www.gharchive.org/
 - BigQuery public datasets: https://docs.cloud.google.com/bigquery/public-data
+
+## v6 cache-bust + verified one-year backfill
+
+The v6 static Pages UI intentionally uses versioned physical asset filenames (`docs/app.v6.js` and `docs/styles.v6.css`) so an older cached `app.js` cannot silently keep rendering the previous interface. The sidebar footer shows `UI v6.0.0-backfill-20260909` as a deployment check.
+
+Deploy with `SAFE-PUBLISH.cmd`, then run `BACKFILL-1YEAR.cmd`. The second command does not return success immediately after dispatching GitHub Actions: it waits for the workflow, then reads `docs/data/historical-backfill.json` back from GitHub and validates that `generatedAt` exists, `repositoriesBackfilled > 0`, and `weeklySnapshots >= 40`.
+
+On the Radar page, selecting 24H / 7D / 30D / 90D / 1Y switches the default ranking to the selected period's Star Growth and shows the active ranking mode in the toolbar. Historical reconstruction remains a separate `Backfill 1Y` page because it represents past weekly cohorts rather than the current Radar cohort.
