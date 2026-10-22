@@ -1,1058 +1,11 @@
 {
   "schemaVersion": 2,
   "trackingStartedAt": "2026-09-09T03:00:00.000Z",
-  "updatedAt": "2026-10-21T21:40:11.340Z",
+  "updatedAt": "2026-10-22T04:39:53.699Z",
   "cadenceHours": 6,
   "intradayRetentionDays": 30,
   "dailyRetentionDays": 730,
   "snapshots": [
-    {
-      "at": "2026-09-21T21:57:30.981Z",
-      "summary": {
-        "repositories": 60,
-        "qualifiedRepositories": 22,
-        "averageSignal": 65,
-        "star24h": 1699,
-        "star7d": 9463,
-        "fastest24hRepo": "BuilderIO/agent-native"
-      },
-      "categories": {
-        "Agent": {
-          "repositories": 37,
-          "totalStars": 137833,
-          "star24h": 1286,
-          "star7d": 4642,
-          "star30d": 17580,
-          "star90d": 52768,
-          "star365d": 112809,
-          "averageSignal": 64,
-          "averageAcceleration": 1.77,
-          "leader": "BuilderIO/agent-native"
-        },
-        "MCP": {
-          "repositories": 23,
-          "totalStars": 60170,
-          "star24h": 330,
-          "star7d": 2035,
-          "star30d": 6873,
-          "star90d": 24713,
-          "star365d": 47492,
-          "averageSignal": 64,
-          "averageAcceleration": 2.33,
-          "leader": "aipoch/open-science"
-        },
-        "Coding": {
-          "repositories": 20,
-          "totalStars": 95240,
-          "star24h": 519,
-          "star7d": 2545,
-          "star30d": 13021,
-          "star90d": 35386,
-          "star365d": 90548,
-          "averageSignal": 66,
-          "averageAcceleration": 1.55,
-          "leader": "akitaonrails/ai-memory"
-        },
-        "LLM": {
-          "repositories": 26,
-          "totalStars": 91713,
-          "star24h": 171,
-          "star7d": 1358,
-          "star30d": 7707,
-          "star90d": 28505,
-          "star365d": 74179,
-          "averageSignal": 63,
-          "averageAcceleration": 1.35,
-          "leader": "omnigent-ai/omnigent"
-        },
-        "Local AI": {
-          "repositories": 20,
-          "totalStars": 62096,
-          "star24h": 334,
-          "star7d": 4843,
-          "star30d": 12920,
-          "star90d": 27362,
-          "star365d": 60692,
-          "averageSignal": 68,
-          "averageAcceleration": 5.4,
-          "leader": "arnegiacomo/fugleramme"
-        },
-        "RAG": {
-          "repositories": 10,
-          "totalStars": 18342,
-          "star24h": 81,
-          "star7d": 460,
-          "star30d": 3080,
-          "star90d": 9111,
-          "star365d": 17272,
-          "averageSignal": 62,
-          "averageAcceleration": 1.56,
-          "leader": "Osmantic/ODS"
-        },
-        "Computer Use": {
-          "repositories": 1,
-          "totalStars": 420,
-          "star24h": 0,
-          "star7d": 11,
-          "star30d": 53,
-          "star90d": 145,
-          "star365d": 420,
-          "averageSignal": 56,
-          "averageAcceleration": 0.89,
-          "leader": "Hacker-Valley-Media/Interceptor"
-        },
-        "AI Image": {
-          "repositories": 4,
-          "totalStars": 9563,
-          "star24h": 68,
-          "star7d": 298,
-          "star30d": 2879,
-          "star90d": 6301,
-          "star365d": 9563,
-          "averageSignal": 61,
-          "averageAcceleration": 0.81,
-          "leader": "Osmantic/ODS"
-        },
-        "AI Video": {
-          "repositories": 3,
-          "totalStars": 2892,
-          "star24h": 14,
-          "star7d": 140,
-          "star30d": 825,
-          "star90d": 1740,
-          "star365d": 2892,
-          "averageSignal": 61,
-          "averageAcceleration": 0.88,
-          "leader": "PurpleDoubleD/locally-uncensored"
-        }
-      },
-      "repositories": [
-        {
-          "fullName": "arnegiacomo/fugleramme",
-          "stars": 3241,
-          "star24h": 69,
-          "star7d": 3066,
-          "star30d": 3236,
-          "star90d": 3241,
-          "star365d": 3241,
-          "signal": 99,
-          "acceleration": 78.7436,
-          "categories": [
-            "Local AI"
-          ]
-        },
-        {
-          "fullName": "liam-machine/erd-studio",
-          "stars": 129,
-          "star24h": 28,
-          "star7d": 124,
-          "star30d": 126,
-          "star90d": 127,
-          "star365d": 130,
-          "signal": 97,
-          "acceleration": 21.5,
-          "categories": [
-            "MCP"
-          ]
-        },
-        {
-          "fullName": "Argos1111/jev_local",
-          "stars": 20,
-          "star24h": 1,
-          "star7d": 20,
-          "star30d": 20,
-          "star90d": 20,
-          "star365d": 20,
-          "signal": 88,
-          "acceleration": 5,
-          "categories": [
-            "Local AI",
-            "LLM"
-          ]
-        },
-        {
-          "fullName": "BuilderIO/agent-native",
-          "stars": 5836,
-          "star24h": 698,
-          "star7d": 1074,
-          "star30d": 1298,
-          "star90d": 3954,
-          "star365d": 5836,
-          "signal": 87,
-          "acceleration": 11.9889,
-          "categories": [
-            "Agent"
-          ]
-        },
-        {
-          "fullName": "aipoch/open-science",
-          "stars": 4886,
-          "star24h": 99,
-          "star7d": 707,
-          "star30d": 2165,
-          "star90d": 4886,
-          "star365d": 4886,
-          "signal": 85,
-          "acceleration": 2.637,
-          "categories": [
-            "Agent",
-            "MCP",
-            "Local AI"
-          ]
-        },
-        {
-          "fullName": "0xSero/omarchy-local-ai",
-          "stars": 30,
-          "star24h": 5,
-          "star7d": 19,
-          "star30d": 30,
-          "star90d": 30,
-          "star365d": 30,
-          "signal": 83,
-          "acceleration": 1.6,
-          "categories": [
-            "Local AI",
-            "Agent",
-            "Coding",
-            "LLM"
-          ]
-        },
-        {
-          "fullName": "repowise-dev/repowise",
-          "stars": 6820,
-          "star24h": 90,
-          "star7d": 392,
-          "star30d": 749,
-          "star90d": 4358,
-          "star365d": 6820,
-          "signal": 83,
-          "acceleration": 4.5632,
-          "categories": [
-            "MCP"
-          ]
-        },
-        {
-          "fullName": "felinics/Memoh",
-          "stars": 2522,
-          "star24h": 6,
-          "star7d": 291,
-          "star30d": 459,
-          "star90d": 591,
-          "star365d": 2522,
-          "signal": 82,
-          "acceleration": 9.5484,
-          "categories": [
-            "Coding",
-            "Agent"
-          ]
-        },
-        {
-          "fullName": "vshulcz/deja-vu",
-          "stars": 915,
-          "star24h": 18,
-          "star7d": 99,
-          "star30d": 262,
-          "star90d": 915,
-          "star365d": 915,
-          "signal": 79,
-          "acceleration": 3.0588,
-          "categories": [
-            "Local AI",
-            "Agent",
-            "MCP",
-            "Coding",
-            "LLM"
-          ]
-        },
-        {
-          "fullName": "cortexkit/aft",
-          "stars": 303,
-          "star24h": 1,
-          "star7d": 24,
-          "star30d": 50,
-          "star90d": 141,
-          "star365d": 303,
-          "signal": 73,
-          "acceleration": 3.2222,
-          "categories": [
-            "RAG",
-            "Agent"
-          ]
-        },
-        {
-          "fullName": "zzet/gortex",
-          "stars": 1623,
-          "star24h": 38,
-          "star7d": 52,
-          "star30d": 174,
-          "star90d": 918,
-          "star365d": 1623,
-          "signal": 73,
-          "acceleration": 2.7143,
-          "categories": [
-            "Coding",
-            "Local AI",
-            "MCP"
-          ]
-        },
-        {
-          "fullName": "akitaonrails/ai-memory",
-          "stars": 7627,
-          "star24h": 312,
-          "star7d": 794,
-          "star30d": 3534,
-          "star90d": 6812,
-          "star365d": 7626,
-          "signal": 72,
-          "acceleration": 0.9732,
-          "categories": [
-            "Agent",
-            "Coding"
-          ]
-        },
-        {
-          "fullName": "desplega-ai/agent-swarm",
-          "stars": 824,
-          "star24h": 7,
-          "star7d": 51,
-          "star30d": 113,
-          "star90d": 284,
-          "star365d": 824,
-          "signal": 71,
-          "acceleration": 2.24,
-          "categories": [
-            "Agent"
-          ]
-        },
-        {
-          "fullName": "omnigent-ai/omnigent",
-          "stars": 10138,
-          "star24h": 14,
-          "star7d": 192,
-          "star30d": 991,
-          "star90d": 5584,
-          "star365d": 10138,
-          "signal": 70,
-          "acceleration": 0.9949,
-          "categories": [
-            "Agent",
-            "Coding",
-            "LLM"
-          ]
-        },
-        {
-          "fullName": "getagentseal/codeburn",
-          "stars": 11148,
-          "star24h": 20,
-          "star7d": 141,
-          "star30d": 1568,
-          "star90d": 3013,
-          "star365d": 11148,
-          "signal": 69,
-          "acceleration": 1.0815,
-          "categories": [
-            "Coding",
-            "Local AI"
-          ]
-        },
-        {
-          "fullName": "NVIDIA/skills",
-          "stars": 3393,
-          "star24h": 5,
-          "star7d": 104,
-          "star30d": 334,
-          "star90d": 1614,
-          "star365d": 3393,
-          "signal": 68,
-          "acceleration": 1.7031,
-          "categories": [
-            "RAG",
-            "Agent",
-            "LLM"
-          ]
-        },
-        {
-          "fullName": "raullenchai/Rapid-MLX",
-          "stars": 3806,
-          "star24h": 7,
-          "star7d": 64,
-          "star30d": 288,
-          "star90d": 848,
-          "star365d": 3806,
-          "signal": 67,
-          "acceleration": 1.1695,
-          "categories": [
-            "Local AI",
-            "LLM"
-          ]
-        },
-        {
-          "fullName": "XiaomiMiMo/MiMo-Code",
-          "stars": 13245,
-          "star24h": 33,
-          "star7d": 157,
-          "star30d": 511,
-          "star90d": 3059,
-          "star365d": 13245,
-          "signal": 67,
-          "acceleration": 0.8571,
-          "categories": [
-            "Coding"
-          ]
-        },
-        {
-          "fullName": "NVIDIA/OpenShell",
-          "stars": 8733,
-          "star24h": 18,
-          "star7d": 128,
-          "star30d": 426,
-          "star90d": 1556,
-          "star365d": 8733,
-          "signal": 66,
-          "acceleration": 1.4778,
-          "categories": [
-            "Agent"
-          ]
-        },
-        {
-          "fullName": "yuri-os/YuriOS",
-          "stars": 24,
-          "star24h": 0,
-          "star7d": 6,
-          "star30d": 17,
-          "star90d": 24,
-          "star365d": 24,
-          "signal": 65,
-          "acceleration": 1.1,
-          "categories": [
-            "Local AI",
-            "Agent"
-          ]
-        },
-        {
-          "fullName": "skyhook-io/radar",
-          "stars": 3418,
-          "star24h": 8,
-          "star7d": 69,
-          "star30d": 385,
-          "star90d": 979,
-          "star365d": 3418,
-          "signal": 65,
-          "acceleration": 0.9487,
-          "categories": [
-            "MCP"
-          ]
-        },
-        {
-          "fullName": "EKKOLearnAI/hermes-studio",
-          "stars": 11162,
-          "star24h": 7,
-          "star7d": 113,
-          "star30d": 731,
-          "star90d": 3066,
-          "star365d": 11162,
-          "signal": 65,
-          "acceleration": 0.6667,
-          "categories": [
-            "Coding",
-            "Local AI",
-            "Agent",
-            "LLM"
-          ]
-        },
-        {
-          "fullName": "codeofaxel/Kiln",
-          "stars": 66,
-          "star24h": 1,
-          "star7d": 9,
-          "star30d": 18,
-          "star90d": 42,
-          "star365d": 66,
-          "signal": 64,
-          "acceleration": 1.5556,
-          "categories": [
-            "MCP"
-          ]
-        },
-        {
-          "fullName": "Natively-AI-assistant/natively-cluely-ai-assistant",
-          "stars": 2571,
-          "star24h": 7,
-          "star7d": 65,
-          "star30d": 266,
-          "star90d": 1044,
-          "star365d": 2571,
-          "signal": 64,
-          "acceleration": 1.0606,
-          "categories": [
-            "Local AI",
-            "RAG",
-            "Coding",
-            "LLM"
-          ]
-        },
-        {
-          "fullName": "Gentleman-Programming/engram",
-          "stars": 6744,
-          "star24h": 8,
-          "star7d": 149,
-          "star30d": 640,
-          "star90d": 2189,
-          "star365d": 6744,
-          "signal": 64,
-          "acceleration": 0.7817,
-          "categories": [
-            "Coding",
-            "Agent",
-            "MCP"
-          ]
-        },
-        {
-          "fullName": "tetherto/qvac",
-          "stars": 624,
-          "star24h": 4,
-          "star7d": 21,
-          "star30d": 92,
-          "star90d": 373,
-          "star365d": 624,
-          "signal": 64,
-          "acceleration": 1.4444,
-          "categories": [
-            "AI Image",
-            "AI Video",
-            "LLM",
-            "Local AI",
-            "RAG"
-          ]
-        },
-        {
-          "fullName": "vellum-ai/vellum-assistant",
-          "stars": 1295,
-          "star24h": 2,
-          "star7d": 42,
-          "star30d": 198,
-          "star90d": 560,
-          "star365d": 1295,
-          "signal": 63,
-          "acceleration": 0.8103,
-          "categories": [
-            "Agent"
-          ]
-        },
-        {
-          "fullName": "OpenWhispr/openwhispr",
-          "stars": 8439,
-          "star24h": 32,
-          "star7d": 252,
-          "star30d": 2813,
-          "star90d": 4535,
-          "star365d": 8298,
-          "signal": 63,
-          "acceleration": 0.6019,
-          "categories": [
-            "Local AI"
-          ]
-        },
-        {
-          "fullName": "fastcrw/crw",
-          "stars": 1060,
-          "star24h": 1,
-          "star7d": 44,
-          "star30d": 392,
-          "star90d": 857,
-          "star365d": 1060,
-          "signal": 63,
-          "acceleration": 0.7656,
-          "categories": [
-            "MCP",
-            "LLM"
-          ]
-        },
-        {
-          "fullName": "PurpleDoubleD/locally-uncensored",
-          "stars": 1750,
-          "star24h": 10,
-          "star7d": 112,
-          "star30d": 644,
-          "star90d": 979,
-          "star365d": 1750,
-          "signal": 63,
-          "acceleration": 0.4756,
-          "categories": [
-            "Coding",
-            "Local AI",
-            "AI Image",
-            "AI Video",
-            "Agent",
-            "LLM"
-          ]
-        },
-        {
-          "fullName": "greenfield-inc/Pane",
-          "stars": 477,
-          "star24h": 1,
-          "star7d": 16,
-          "star30d": 72,
-          "star90d": 254,
-          "star365d": 477,
-          "signal": 62,
-          "acceleration": 1.05,
-          "categories": [
-            "Coding",
-            "Agent"
-          ]
-        },
-        {
-          "fullName": "borghei/Claude-Skills",
-          "stars": 803,
-          "star24h": 7,
-          "star7d": 48,
-          "star30d": 270,
-          "star90d": 506,
-          "star365d": 803,
-          "signal": 61,
-          "acceleration": 1.2619,
-          "categories": [
-            "Agent",
-            "Coding",
-            "MCP"
-          ]
-        },
-        {
-          "fullName": "lioensky/VCPToolBox",
-          "stars": 2319,
-          "star24h": 9,
-          "star7d": 22,
-          "star30d": 64,
-          "star90d": 190,
-          "star365d": 2156,
-          "signal": 61,
-          "acceleration": 1.9286,
-          "categories": [
-            "RAG",
-            "Agent",
-            "LLM"
-          ]
-        },
-        {
-          "fullName": "Osmantic/ODS",
-          "stars": 6671,
-          "star24h": 54,
-          "star7d": 158,
-          "star30d": 2054,
-          "star90d": 4561,
-          "star365d": 6671,
-          "signal": 60,
-          "acceleration": 0.5971,
-          "categories": [
-            "RAG",
-            "AI Image",
-            "LLM"
-          ]
-        },
-        {
-          "fullName": "macro-inc/macro",
-          "stars": 4372,
-          "star24h": 8,
-          "star7d": 62,
-          "star30d": 419,
-          "star90d": 4097,
-          "star365d": 4372,
-          "signal": 59,
-          "acceleration": 0.7528,
-          "categories": [
-            "MCP",
-            "Agent"
-          ]
-        },
-        {
-          "fullName": "strands-labs/harness-optimizer",
-          "stars": 43,
-          "star24h": 0,
-          "star7d": 5,
-          "star30d": 12,
-          "star90d": 39,
-          "star365d": 43,
-          "signal": 59,
-          "acceleration": 1.25,
-          "categories": [
-            "Agent",
-            "LLM"
-          ]
-        },
-        {
-          "fullName": "taylorwilsdon/google_workspace_mcp",
-          "stars": 3202,
-          "star24h": 4,
-          "star7d": 43,
-          "star30d": 160,
-          "star90d": 501,
-          "star365d": 2527,
-          "signal": 59,
-          "acceleration": 1.1707,
-          "categories": [
-            "MCP",
-            "LLM"
-          ]
-        },
-        {
-          "fullName": "1ay1/agentty",
-          "stars": 604,
-          "star24h": 1,
-          "star7d": 9,
-          "star30d": 28,
-          "star90d": 585,
-          "star365d": 604,
-          "signal": 59,
-          "acceleration": 1.5556,
-          "categories": [
-            "RAG",
-            "Agent",
-            "MCP",
-            "LLM",
-            "Local AI"
-          ]
-        },
-        {
-          "fullName": "caura-ai/caura",
-          "stars": 528,
-          "star24h": 0,
-          "star7d": 20,
-          "star30d": 103,
-          "star90d": 401,
-          "star365d": 528,
-          "signal": 59,
-          "acceleration": 0.7813,
-          "categories": [
-            "RAG",
-            "Agent",
-            "MCP",
-            "LLM"
-          ]
-        },
-        {
-          "fullName": "s2b-dev/smart-second-brain",
-          "stars": 1292,
-          "star24h": 0,
-          "star7d": 35,
-          "star30d": 83,
-          "star90d": 168,
-          "star365d": 385,
-          "signal": 59,
-          "acceleration": 1.9048,
-          "categories": [
-            "RAG"
-          ]
-        },
-        {
-          "fullName": "rilldata/rill",
-          "stars": 2909,
-          "star24h": 1,
-          "star7d": 27,
-          "star30d": 81,
-          "star90d": 242,
-          "star365d": 595,
-          "signal": 58,
-          "acceleration": 2,
-          "categories": [
-            "Agent"
-          ]
-        },
-        {
-          "fullName": "kentcdodds/kody",
-          "stars": 662,
-          "star24h": 3,
-          "star7d": 38,
-          "star30d": 172,
-          "star90d": 560,
-          "star365d": 662,
-          "signal": 58,
-          "acceleration": 0.4831,
-          "categories": [
-            "MCP",
-            "Coding",
-            "Agent"
-          ]
-        },
-        {
-          "fullName": "RooCodeInc/Roomote",
-          "stars": 252,
-          "star24h": 2,
-          "star7d": 12,
-          "star30d": 55,
-          "star90d": 252,
-          "star365d": 252,
-          "signal": 57,
-          "acceleration": 0.85,
-          "categories": [
-            "Coding",
-            "Agent"
-          ]
-        },
-        {
-          "fullName": "caipe-io/ai-platform-engineering",
-          "stars": 417,
-          "star24h": 0,
-          "star7d": 8,
-          "star30d": 22,
-          "star90d": 42,
-          "star365d": 304,
-          "signal": 57,
-          "acceleration": 1.625,
-          "categories": [
-            "Agent",
-            "MCP",
-            "LLM"
-          ]
-        },
-        {
-          "fullName": "langchain-ai/open-swe",
-          "stars": 10742,
-          "star24h": 3,
-          "star7d": 41,
-          "star30d": 185,
-          "star90d": 802,
-          "star365d": 6051,
-          "signal": 57,
-          "acceleration": 0.9787,
-          "categories": [
-            "Agent",
-            "Coding",
-            "LLM"
-          ]
-        },
-        {
-          "fullName": "danieljustus/symaira-vault",
-          "stars": 30,
-          "star24h": 1,
-          "star7d": 2,
-          "star30d": 5,
-          "star90d": 9,
-          "star365d": 30,
-          "signal": 57,
-          "acceleration": 1.1667,
-          "categories": [
-            "MCP",
-            "Agent"
-          ]
-        },
-        {
-          "fullName": "genomoncology/biomcp",
-          "stars": 640,
-          "star24h": 0,
-          "star7d": 9,
-          "star30d": 39,
-          "star90d": 114,
-          "star365d": 342,
-          "signal": 57,
-          "acceleration": 1.75,
-          "categories": [
-            "MCP",
-            "LLM"
-          ]
-        },
-        {
-          "fullName": "Hacker-Valley-Media/Interceptor",
-          "stars": 420,
-          "star24h": 0,
-          "star7d": 11,
-          "star30d": 53,
-          "star90d": 145,
-          "star365d": 420,
-          "signal": 56,
-          "acceleration": 0.8889,
-          "categories": [
-            "Computer Use",
-            "Agent",
-            "MCP"
-          ]
-        },
-        {
-          "fullName": "Untrivial-ai/agent-orchestrator",
-          "stars": 12242,
-          "star24h": 25,
-          "star7d": 199,
-          "star30d": 2431,
-          "star90d": 4711,
-          "star365d": 12242,
-          "signal": 56,
-          "acceleration": 0.2024,
-          "categories": [
-            "Agent",
-            "Coding"
-          ]
-        },
-        {
-          "fullName": "ScriptedAlchemy/tracedecay",
-          "stars": 77,
-          "star24h": 0,
-          "star7d": 3,
-          "star30d": 9,
-          "star90d": 40,
-          "star365d": 77,
-          "signal": 56,
-          "acceleration": 1,
-          "categories": [
-            "MCP",
-            "Coding",
-            "Local AI"
-          ]
-        },
-        {
-          "fullName": "googleapis/mcp-toolbox",
-          "stars": 16473,
-          "star24h": 5,
-          "star7d": 73,
-          "star30d": 256,
-          "star90d": 857,
-          "star365d": 6142,
-          "signal": 56,
-          "acceleration": 0.9286,
-          "categories": [
-            "MCP",
-            "Agent",
-            "LLM"
-          ]
-        },
-        {
-          "fullName": "maziyarpanahi/openmed",
-          "stars": 5353,
-          "star24h": 6,
-          "star7d": 34,
-          "star30d": 233,
-          "star90d": 1612,
-          "star365d": 5352,
-          "signal": 56,
-          "acceleration": 0.629,
-          "categories": [
-            "Local AI",
-            "LLM"
-          ]
-        },
-        {
-          "fullName": "livekit/agents",
-          "stars": 14302,
-          "star24h": 10,
-          "star7d": 110,
-          "star30d": 1209,
-          "star90d": 3248,
-          "star365d": 6891,
-          "signal": 56,
-          "acceleration": 0.777,
-          "categories": [
-            "Agent"
-          ]
-        },
-        {
-          "fullName": "reyamira/models",
-          "stars": 510,
-          "star24h": 0,
-          "star7d": 4,
-          "star30d": 17,
-          "star90d": 61,
-          "star365d": 510,
-          "signal": 56,
-          "acceleration": 1.2857,
-          "categories": [
-            "Coding"
-          ]
-        },
-        {
-          "fullName": "lemonade-sdk/lemonade",
-          "stars": 5763,
-          "star24h": 10,
-          "star7d": 57,
-          "star30d": 337,
-          "star90d": 1197,
-          "star365d": 4501,
-          "signal": 56,
-          "acceleration": 0.9538,
-          "categories": [
-            "MCP",
-            "Local AI",
-            "LLM"
-          ]
-        },
-        {
-          "fullName": "LocalMode-AI/LocalMode",
-          "stars": 37,
-          "star24h": 0,
-          "star7d": 2,
-          "star30d": 6,
-          "star90d": 34,
-          "star365d": 37,
-          "signal": 56,
-          "acceleration": 1.4,
-          "categories": [
-            "LLM",
-            "Local AI",
-            "RAG"
-          ]
-        },
-        {
-          "fullName": "libra-tools/libra",
-          "stars": 86,
-          "star24h": 0,
-          "star7d": 3,
-          "star30d": 4,
-          "star90d": 15,
-          "star365d": 86,
-          "signal": 55,
-          "acceleration": 1.3333,
-          "categories": [
-            "Agent"
-          ]
-        },
-        {
-          "fullName": "ihabkhaled/ClawAI",
-          "stars": 23,
-          "star24h": 0,
-          "star7d": 1,
-          "star30d": 1,
-          "star90d": 2,
-          "star365d": 23,
-          "signal": 55,
-          "acceleration": 1.2,
-          "categories": [
-            "Local AI",
-            "Agent",
-            "LLM"
-          ]
-        },
-        {
-          "fullName": "Mesh-LLM/mesh-llm",
-          "stars": 3429,
-          "star24h": 0,
-          "star7d": 23,
-          "star30d": 157,
-          "star90d": 2238,
-          "star365d": 3429,
-          "signal": 55,
-          "acceleration": 0.5091,
-          "categories": [
-            "Agent",
-            "LLM"
-          ]
-        },
-        {
-          "fullName": "aqm857886159/Nomi",
-          "stars": 518,
-          "star24h": 0,
-          "star7d": 7,
-          "star30d": 89,
-          "star90d": 388,
-          "star365d": 518,
-          "signal": 55,
-          "acceleration": 0.7059,
-          "categories": [
-            "AI Video",
-            "Agent",
-            "MCP",
-            "AI Image"
-          ]
-        }
-      ]
-    },
     {
       "at": "2026-09-22T04:51:46.669Z",
       "summary": {
@@ -109568,6 +108521,1064 @@
           ]
         }
       ]
+    },
+    {
+      "at": "2026-10-22T04:39:53.699Z",
+      "summary": {
+        "repositories": 60,
+        "qualifiedRepositories": 25,
+        "averageSignal": 66,
+        "star24h": 940,
+        "star7d": 12443,
+        "fastest24hRepo": "xerj-org/xerj"
+      },
+      "categories": {
+        "Agent": {
+          "repositories": 41,
+          "totalStars": 153146,
+          "star24h": 791,
+          "star7d": 11445,
+          "star30d": 40979,
+          "star90d": 79774,
+          "star365d": 149272,
+          "averageSignal": 67,
+          "averageAcceleration": 2.57,
+          "leader": "xerj-org/xerj"
+        },
+        "MCP": {
+          "repositories": 28,
+          "totalStars": 105446,
+          "star24h": 491,
+          "star7d": 9123,
+          "star30d": 19703,
+          "star90d": 41876,
+          "star365d": 94680,
+          "averageSignal": 64,
+          "averageAcceleration": 3.07,
+          "leader": "xerj-org/xerj"
+        },
+        "Coding": {
+          "repositories": 18,
+          "totalStars": 61212,
+          "star24h": 538,
+          "star7d": 8212,
+          "star30d": 17050,
+          "star90d": 35048,
+          "star365d": 60804,
+          "averageSignal": 65,
+          "averageAcceleration": 1.56,
+          "leader": "xerj-org/xerj"
+        },
+        "LLM": {
+          "repositories": 26,
+          "totalStars": 60896,
+          "star24h": 182,
+          "star7d": 1180,
+          "star30d": 3876,
+          "star90d": 16970,
+          "star365d": 56682,
+          "averageSignal": 64,
+          "averageAcceleration": 2.25,
+          "leader": "shuxiachai/academic-commercialization-agent"
+        },
+        "Local AI": {
+          "repositories": 23,
+          "totalStars": 60560,
+          "star24h": 497,
+          "star7d": 8537,
+          "star30d": 17143,
+          "star90d": 35301,
+          "star365d": 60515,
+          "averageSignal": 69,
+          "averageAcceleration": 1.81,
+          "leader": "xerj-org/xerj"
+        },
+        "RAG": {
+          "repositories": 8,
+          "totalStars": 20745,
+          "star24h": 499,
+          "star7d": 7418,
+          "star30d": 11286,
+          "star90d": 14366,
+          "star365d": 17709,
+          "averageSignal": 71,
+          "averageAcceleration": 3.79,
+          "leader": "xerj-org/xerj"
+        },
+        "Computer Use": {
+          "repositories": 5,
+          "totalStars": 15766,
+          "star24h": 6,
+          "star7d": 466,
+          "star30d": 1157,
+          "star90d": 2425,
+          "star365d": 15766,
+          "averageSignal": 77,
+          "averageAcceleration": 10.48,
+          "leader": "ctoldigital/axuse"
+        },
+        "AI Image": {
+          "repositories": 3,
+          "totalStars": 17517,
+          "star24h": 16,
+          "star7d": 113,
+          "star30d": 432,
+          "star90d": 1549,
+          "star365d": 17516,
+          "averageSignal": 62,
+          "averageAcceleration": 1.06,
+          "leader": "YouMind-OpenLab/awesome-nano-banana-pro-prompts"
+        },
+        "AI Video": {
+          "repositories": 3,
+          "totalStars": 6301,
+          "star24h": 25,
+          "star7d": 154,
+          "star30d": 617,
+          "star90d": 2337,
+          "star365d": 6301,
+          "averageSignal": 62,
+          "averageAcceleration": 1.08,
+          "leader": "ArcReel/ArcReel"
+        }
+      },
+      "repositories": [
+        {
+          "fullName": "timoncool/speech-studio",
+          "stars": 47,
+          "star24h": 0,
+          "star7d": 45,
+          "star30d": 47,
+          "star90d": 47,
+          "star365d": 47,
+          "signal": 98,
+          "acceleration": 7.1429,
+          "categories": [
+            "Local AI"
+          ]
+        },
+        {
+          "fullName": "Sallyn0225/eidolon-sc",
+          "stars": 193,
+          "star24h": 48,
+          "star7d": 188,
+          "star30d": 193,
+          "star90d": 193,
+          "star365d": 193,
+          "signal": 98,
+          "acceleration": 19.3,
+          "categories": [
+            "RAG",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "ctoldigital/axuse",
+          "stars": 236,
+          "star24h": 0,
+          "star7d": 236,
+          "star30d": 236,
+          "star90d": 236,
+          "star365d": 236,
+          "signal": 97,
+          "acceleration": 48.2,
+          "categories": [
+            "Computer Use",
+            "Agent",
+            "MCP"
+          ]
+        },
+        {
+          "fullName": "xerj-org/xerj",
+          "stars": 12852,
+          "star24h": 370,
+          "star7d": 6960,
+          "star30d": 10589,
+          "star90d": 12814,
+          "star365d": 12853,
+          "signal": 96,
+          "acceleration": 2.7049,
+          "categories": [
+            "MCP",
+            "Coding",
+            "Local AI",
+            "RAG",
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "jiangkoumo/ego-decision-layer",
+          "stars": 27,
+          "star24h": 0,
+          "star7d": 22,
+          "star30d": 23,
+          "star90d": 27,
+          "star365d": 27,
+          "signal": 95,
+          "acceleration": 5.4,
+          "categories": [
+            "Local AI",
+            "Agent",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "touri-ai/touri",
+          "stars": 87,
+          "star24h": 2,
+          "star7d": 55,
+          "star30d": 87,
+          "star90d": 87,
+          "star365d": 87,
+          "signal": 85,
+          "acceleration": 1.6216,
+          "categories": [
+            "Computer Use",
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "timoncool/YuE2-Studio",
+          "stars": 1059,
+          "star24h": 47,
+          "star7d": 338,
+          "star30d": 1057,
+          "star90d": 1059,
+          "star365d": 1059,
+          "signal": 84,
+          "acceleration": 1.4913,
+          "categories": [
+            "Local AI"
+          ]
+        },
+        {
+          "fullName": "aipoch/open-science",
+          "stars": 5333,
+          "star24h": 24,
+          "star7d": 428,
+          "star30d": 1187,
+          "star90d": 4885,
+          "star365d": 5333,
+          "signal": 82,
+          "acceleration": 2.7935,
+          "categories": [
+            "Local AI",
+            "Agent",
+            "MCP"
+          ]
+        },
+        {
+          "fullName": "shuxiachai/academic-commercialization-agent",
+          "stars": 737,
+          "star24h": 70,
+          "star7d": 195,
+          "star30d": 296,
+          "star90d": 737,
+          "star365d": 737,
+          "signal": 81,
+          "acceleration": 1.9802,
+          "categories": [
+            "RAG",
+            "Agent",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "deskmind-ai/deskmind",
+          "stars": 114,
+          "star24h": 3,
+          "star7d": 55,
+          "star30d": 114,
+          "star90d": 114,
+          "star365d": 114,
+          "signal": 80,
+          "acceleration": 1.2766,
+          "categories": [
+            "Computer Use",
+            "Agent",
+            "LLM",
+            "Local AI"
+          ]
+        },
+        {
+          "fullName": "nikunjsingh93/Mochu-Local-AI-Assistant",
+          "stars": 21,
+          "star24h": 0,
+          "star7d": 10,
+          "star30d": 11,
+          "star90d": 13,
+          "star365d": 21,
+          "signal": 75,
+          "acceleration": 3,
+          "categories": [
+            "Local AI"
+          ]
+        },
+        {
+          "fullName": "ginlix-ai/LangAlpha",
+          "stars": 1906,
+          "star24h": 0,
+          "star7d": 90,
+          "star30d": 142,
+          "star90d": 338,
+          "star365d": 1906,
+          "signal": 74,
+          "acceleration": 6.3333,
+          "categories": [
+            "MCP",
+            "Coding",
+            "Agent",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "rlaope/oh-my-hermes",
+          "stars": 3542,
+          "star24h": 53,
+          "star7d": 164,
+          "star30d": 700,
+          "star90d": 3475,
+          "star365d": 3542,
+          "signal": 71,
+          "acceleration": 1.0368,
+          "categories": [
+            "Coding",
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "autonomous-ai/openharness",
+          "stars": 1338,
+          "star24h": 9,
+          "star7d": 81,
+          "star30d": 655,
+          "star90d": 1338,
+          "star365d": 1338,
+          "signal": 70,
+          "acceleration": 1.1622,
+          "categories": [
+            "Agent",
+            "Coding",
+            "MCP"
+          ]
+        },
+        {
+          "fullName": "lexmount/moli",
+          "stars": 19979,
+          "star24h": 113,
+          "star7d": 1370,
+          "star30d": 17831,
+          "star90d": 19979,
+          "star365d": 19979,
+          "signal": 70,
+          "acceleration": 0.2906,
+          "categories": [
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "whiteguo233/OpenBiliClaw",
+          "stars": 3532,
+          "star24h": 18,
+          "star7d": 88,
+          "star30d": 228,
+          "star90d": 2110,
+          "star365d": 3532,
+          "signal": 69,
+          "acceleration": 1.4308,
+          "categories": [
+            "Local AI",
+            "Agent",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "omnigent-ai/omnigent",
+          "stars": 10973,
+          "star24h": 32,
+          "star7d": 142,
+          "star30d": 851,
+          "star90d": 3339,
+          "star365d": 10973,
+          "signal": 68,
+          "acceleration": 0.8963,
+          "categories": [
+            "Coding",
+            "Agent",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "Gentleman-Programming/engram",
+          "stars": 7519,
+          "star24h": 23,
+          "star7d": 237,
+          "star30d": 790,
+          "star90d": 1900,
+          "star365d": 7519,
+          "signal": 68,
+          "acceleration": 1.1691,
+          "categories": [
+            "MCP",
+            "Coding",
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "JiangNanGenius/floe-agent",
+          "stars": 289,
+          "star24h": 0,
+          "star7d": 35,
+          "star30d": 173,
+          "star90d": 289,
+          "star365d": 289,
+          "signal": 67,
+          "acceleration": 1.0811,
+          "categories": [
+            "Coding",
+            "Local AI",
+            "Agent",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "adityaagarw/Pantheon",
+          "stars": 40,
+          "star24h": 0,
+          "star7d": 4,
+          "star30d": 40,
+          "star90d": 40,
+          "star365d": 40,
+          "signal": 67,
+          "acceleration": 1.8,
+          "categories": [
+            "Coding",
+            "Agent",
+            "MCP",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "ArcReel/ArcReel",
+          "stars": 5650,
+          "star24h": 24,
+          "star7d": 131,
+          "star30d": 535,
+          "star90d": 2079,
+          "star365d": 5650,
+          "signal": 67,
+          "acceleration": 1.0382,
+          "categories": [
+            "Agent",
+            "AI Video"
+          ]
+        },
+        {
+          "fullName": "OpenByteInc/QuantDinger",
+          "stars": 13003,
+          "star24h": 0,
+          "star7d": 195,
+          "star30d": 1048,
+          "star90d": 3166,
+          "star365d": 13003,
+          "signal": 66,
+          "acceleration": 0.7463,
+          "categories": [
+            "Agent",
+            "MCP"
+          ]
+        },
+        {
+          "fullName": "Orkas-AI/Orkas",
+          "stars": 2145,
+          "star24h": 0,
+          "star7d": 47,
+          "star30d": 143,
+          "star90d": 1571,
+          "star365d": 2145,
+          "signal": 66,
+          "acceleration": 1.1064,
+          "categories": [
+            "Agent",
+            "Coding",
+            "Local AI"
+          ]
+        },
+        {
+          "fullName": "zhouxiaoka/autoclip",
+          "stars": 9629,
+          "star24h": 0,
+          "star7d": 190,
+          "star30d": 924,
+          "star90d": 3491,
+          "star365d": 8972,
+          "signal": 65,
+          "acceleration": 1.0209,
+          "categories": [
+            "MCP",
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "NanmiCoder/cc-haha",
+          "stars": 15107,
+          "star24h": 0,
+          "star7d": 100,
+          "star30d": 502,
+          "star90d": 1766,
+          "star365d": 15107,
+          "signal": 65,
+          "acceleration": 0.7836,
+          "categories": [
+            "Local AI",
+            "Computer Use",
+            "Agent",
+            "MCP",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "hashgraph-online/hol-guard",
+          "stars": 963,
+          "star24h": 8,
+          "star7d": 54,
+          "star30d": 314,
+          "star90d": 546,
+          "star365d": 963,
+          "signal": 64,
+          "acceleration": 0.6629,
+          "categories": [
+            "Agent",
+            "MCP"
+          ]
+        },
+        {
+          "fullName": "aqm857886159/Nomi",
+          "stars": 594,
+          "star24h": 1,
+          "star7d": 21,
+          "star30d": 76,
+          "star90d": 232,
+          "star365d": 594,
+          "signal": 64,
+          "acceleration": 1.04,
+          "categories": [
+            "MCP",
+            "Local AI",
+            "AI Video",
+            "Agent",
+            "AI Image"
+          ]
+        },
+        {
+          "fullName": "KitionAI/kition",
+          "stars": 499,
+          "star24h": 0,
+          "star7d": 33,
+          "star30d": 177,
+          "star90d": 499,
+          "star365d": 499,
+          "signal": 64,
+          "acceleration": 0.7917,
+          "categories": [
+            "MCP",
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "xiufengsun/TokenTracker",
+          "stars": 2106,
+          "star24h": 0,
+          "star7d": 55,
+          "star30d": 419,
+          "star90d": 1043,
+          "star365d": 2105,
+          "signal": 64,
+          "acceleration": 0.8451,
+          "categories": [
+            "Local AI"
+          ]
+        },
+        {
+          "fullName": "kstevica/captain-claw",
+          "stars": 175,
+          "star24h": 1,
+          "star7d": 7,
+          "star30d": 11,
+          "star90d": 18,
+          "star365d": 175,
+          "signal": 63,
+          "acceleration": 1.7143,
+          "categories": [
+            "Coding",
+            "Local AI",
+            "Agent",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "YouMind-OpenLab/awesome-nano-banana-pro-prompts",
+          "stars": 13661,
+          "star24h": 15,
+          "star7d": 70,
+          "star30d": 234,
+          "star90d": 820,
+          "star365d": 13660,
+          "signal": 63,
+          "acceleration": 1.25,
+          "categories": [
+            "AI Image"
+          ]
+        },
+        {
+          "fullName": "Bike4Mind/bike4mind",
+          "stars": 90,
+          "star24h": 2,
+          "star7d": 3,
+          "star30d": 3,
+          "star90d": 30,
+          "star365d": 90,
+          "signal": 62,
+          "acceleration": 1.6,
+          "categories": [
+            "MCP",
+            "Local AI",
+            "RAG",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "caura-ai/caura",
+          "stars": 505,
+          "star24h": 2,
+          "star7d": 7,
+          "star30d": 32,
+          "star90d": 177,
+          "star365d": 505,
+          "signal": 62,
+          "acceleration": 1.3333,
+          "categories": [
+            "MCP",
+            "RAG",
+            "Agent",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "marcusquinn/aidevops",
+          "stars": 420,
+          "star24h": 0,
+          "star7d": 10,
+          "star30d": 23,
+          "star90d": 81,
+          "star365d": 420,
+          "signal": 62,
+          "acceleration": 2.1429,
+          "categories": [
+            "Coding",
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "Rich627/whatsapp-claude-plugin",
+          "stars": 110,
+          "star24h": 0,
+          "star7d": 6,
+          "star30d": 16,
+          "star90d": 58,
+          "star365d": 110,
+          "signal": 61,
+          "acceleration": 1.8333,
+          "categories": [
+            "MCP"
+          ]
+        },
+        {
+          "fullName": "converge-ai-labs/agent-foundation",
+          "stars": 222,
+          "star24h": 1,
+          "star7d": 20,
+          "star30d": 218,
+          "star90d": 222,
+          "star365d": 222,
+          "signal": 59,
+          "acceleration": 0.5208,
+          "categories": [
+            "Computer Use",
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "cortexkit/aft",
+          "stars": 330,
+          "star24h": 1,
+          "star7d": 6,
+          "star30d": 26,
+          "star90d": 120,
+          "star365d": 330,
+          "signal": 58,
+          "acceleration": 1.375,
+          "categories": [
+            "Agent",
+            "Coding",
+            "RAG"
+          ]
+        },
+        {
+          "fullName": "ModelEngine-Group/nexent",
+          "stars": 6007,
+          "star24h": 6,
+          "star7d": 58,
+          "star30d": 143,
+          "star90d": 273,
+          "star365d": 2970,
+          "signal": 58,
+          "acceleration": 1.05,
+          "categories": [
+            "RAG",
+            "Agent",
+            "MCP",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "sheeki03/tirith",
+          "stars": 2762,
+          "star24h": 0,
+          "star7d": 8,
+          "star30d": 34,
+          "star90d": 159,
+          "star365d": 2762,
+          "signal": 58,
+          "acceleration": 1.4444,
+          "categories": [
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "apache/maka",
+          "stars": 5866,
+          "star24h": 0,
+          "star7d": 67,
+          "star30d": 296,
+          "star90d": 5006,
+          "star365d": 5866,
+          "signal": 58,
+          "acceleration": 0.576,
+          "categories": [
+            "Agent",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "entireio/cli",
+          "stars": 5199,
+          "star24h": 0,
+          "star7d": 20,
+          "star30d": 105,
+          "star90d": 418,
+          "star365d": 5199,
+          "signal": 58,
+          "acceleration": 1,
+          "categories": [
+            "Coding",
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "off-grid-ai/OGAM",
+          "stars": 3262,
+          "star24h": 0,
+          "star7d": 22,
+          "star30d": 122,
+          "star90d": 497,
+          "star365d": 3262,
+          "signal": 58,
+          "acceleration": 0.9,
+          "categories": [
+            "MCP",
+            "Local AI",
+            "LLM",
+            "AI Image"
+          ]
+        },
+        {
+          "fullName": "silverstein/minutes",
+          "stars": 1563,
+          "star24h": 1,
+          "star7d": 13,
+          "star30d": 74,
+          "star90d": 205,
+          "star365d": 1563,
+          "signal": 58,
+          "acceleration": 1,
+          "categories": [
+            "Local AI",
+            "Agent",
+            "MCP"
+          ]
+        },
+        {
+          "fullName": "vastsa/PI-Desktop",
+          "stars": 7125,
+          "star24h": 29,
+          "star7d": 249,
+          "star30d": 1958,
+          "star90d": 7095,
+          "star365d": 7096,
+          "signal": 58,
+          "acceleration": 0.6597,
+          "categories": [
+            "Local AI",
+            "Agent",
+            "MCP",
+            "Coding"
+          ]
+        },
+        {
+          "fullName": "thetahealth/mirobody",
+          "stars": 1387,
+          "star24h": 0,
+          "star7d": 13,
+          "star30d": 53,
+          "star90d": 338,
+          "star365d": 1387,
+          "signal": 58,
+          "acceleration": 1.2857,
+          "categories": [
+            "Local AI",
+            "MCP",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "IvanMurzak/Godot-MCP",
+          "stars": 302,
+          "star24h": 0,
+          "star7d": 13,
+          "star30d": 51,
+          "star90d": 118,
+          "star365d": 302,
+          "signal": 57,
+          "acceleration": 0.9,
+          "categories": [
+            "MCP",
+            "Coding"
+          ]
+        },
+        {
+          "fullName": "Tuskira/ai-agent-gateway",
+          "stars": 81,
+          "star24h": 0,
+          "star7d": 4,
+          "star30d": 81,
+          "star90d": 81,
+          "star365d": 81,
+          "signal": 56,
+          "acceleration": 1.125,
+          "categories": [
+            "Agent",
+            "MCP",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "townsendmerino/goinfer",
+          "stars": 21,
+          "star24h": 0,
+          "star7d": 2,
+          "star30d": 6,
+          "star90d": 16,
+          "star365d": 21,
+          "signal": 56,
+          "acceleration": 1.1667,
+          "categories": [
+            "Local AI",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "awslabs/aidlc-workflows",
+          "stars": 5451,
+          "star24h": 20,
+          "star7d": 126,
+          "star30d": 703,
+          "star90d": 1781,
+          "star365d": 5451,
+          "signal": 56,
+          "acceleration": 0.5282,
+          "categories": [
+            "Coding"
+          ]
+        },
+        {
+          "fullName": "jeremylongshore/tons-of-skills-marketplace",
+          "stars": 2858,
+          "star24h": 0,
+          "star7d": 18,
+          "star30d": 90,
+          "star90d": 338,
+          "star365d": 2723,
+          "signal": 55,
+          "acceleration": 0.8214,
+          "categories": [
+            "MCP",
+            "Agent",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "zereight/gitlab-mcp",
+          "stars": 2060,
+          "star24h": 0,
+          "star7d": 16,
+          "star30d": 65,
+          "star90d": 232,
+          "star365d": 1415,
+          "signal": 55,
+          "acceleration": 1.2353,
+          "categories": [
+            "MCP",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "snapotter-hq/SnapOtter",
+          "stars": 2830,
+          "star24h": 1,
+          "star7d": 16,
+          "star30d": 117,
+          "star90d": 765,
+          "star365d": 2830,
+          "signal": 55,
+          "acceleration": 0.6364,
+          "categories": [
+            "Local AI"
+          ]
+        },
+        {
+          "fullName": "YouMind-OpenLab/awesome-grok-imagine-prompts",
+          "stars": 57,
+          "star24h": 0,
+          "star7d": 2,
+          "star30d": 6,
+          "star90d": 26,
+          "star365d": 57,
+          "signal": 55,
+          "acceleration": 1.1667,
+          "categories": [
+            "AI Video"
+          ]
+        },
+        {
+          "fullName": "modelcontextprotocol/modelcontextprotocol",
+          "stars": 9505,
+          "star24h": 16,
+          "star7d": 52,
+          "star30d": 246,
+          "star90d": 868,
+          "star365d": 3621,
+          "signal": 55,
+          "acceleration": 1.0179,
+          "categories": [
+            "MCP"
+          ]
+        },
+        {
+          "fullName": "danyuchn/pii-guard",
+          "stars": 251,
+          "star24h": 0,
+          "star7d": 2,
+          "star30d": 105,
+          "star90d": 215,
+          "star365d": 251,
+          "signal": 54,
+          "acceleration": 1.4,
+          "categories": [
+            "Local AI",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "avibe-bot/avibe",
+          "stars": 630,
+          "star24h": 0,
+          "star7d": 6,
+          "star30d": 125,
+          "star90d": 152,
+          "star365d": 614,
+          "signal": 54,
+          "acceleration": 1.2222,
+          "categories": [
+            "Local AI",
+            "Agent",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "TanStack/ai",
+          "stars": 3213,
+          "star24h": 0,
+          "star7d": 16,
+          "star30d": 93,
+          "star90d": 329,
+          "star365d": 3212,
+          "signal": 54,
+          "acceleration": 0.7,
+          "categories": [
+            "Agent",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "netresearch/claude-code-marketplace",
+          "stars": 65,
+          "star24h": 0,
+          "star7d": 2,
+          "star30d": 5,
+          "star90d": 20,
+          "star365d": 65,
+          "signal": 54,
+          "acceleration": 1.4,
+          "categories": [
+            "Coding",
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "dyoshikawa/rulesync",
+          "stars": 1541,
+          "star24h": 0,
+          "star7d": 19,
+          "star30d": 85,
+          "star90d": 293,
+          "star365d": 1161,
+          "signal": 54,
+          "acceleration": 1.0435,
+          "categories": [
+            "MCP",
+            "Coding",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "IHUI-INF-AI/IHUI-AI",
+          "stars": 31,
+          "star24h": 0,
+          "star7d": 1,
+          "star30d": 4,
+          "star90d": 22,
+          "star365d": 31,
+          "signal": 54,
+          "acceleration": 1,
+          "categories": [
+            "RAG",
+            "Agent",
+            "MCP",
+            "LLM"
+          ]
+        }
+      ]
     }
   ],
   "daily": [
@@ -154882,6 +154893,1064 @@
           "categories": [
             "Coding",
             "Agent"
+          ]
+        }
+      ]
+    },
+    {
+      "at": "2026-10-22T04:39:53.699Z",
+      "summary": {
+        "repositories": 60,
+        "qualifiedRepositories": 25,
+        "averageSignal": 66,
+        "star24h": 940,
+        "star7d": 12443,
+        "fastest24hRepo": "xerj-org/xerj"
+      },
+      "categories": {
+        "Agent": {
+          "repositories": 41,
+          "totalStars": 153146,
+          "star24h": 791,
+          "star7d": 11445,
+          "star30d": 40979,
+          "star90d": 79774,
+          "star365d": 149272,
+          "averageSignal": 67,
+          "averageAcceleration": 2.57,
+          "leader": "xerj-org/xerj"
+        },
+        "MCP": {
+          "repositories": 28,
+          "totalStars": 105446,
+          "star24h": 491,
+          "star7d": 9123,
+          "star30d": 19703,
+          "star90d": 41876,
+          "star365d": 94680,
+          "averageSignal": 64,
+          "averageAcceleration": 3.07,
+          "leader": "xerj-org/xerj"
+        },
+        "Coding": {
+          "repositories": 18,
+          "totalStars": 61212,
+          "star24h": 538,
+          "star7d": 8212,
+          "star30d": 17050,
+          "star90d": 35048,
+          "star365d": 60804,
+          "averageSignal": 65,
+          "averageAcceleration": 1.56,
+          "leader": "xerj-org/xerj"
+        },
+        "LLM": {
+          "repositories": 26,
+          "totalStars": 60896,
+          "star24h": 182,
+          "star7d": 1180,
+          "star30d": 3876,
+          "star90d": 16970,
+          "star365d": 56682,
+          "averageSignal": 64,
+          "averageAcceleration": 2.25,
+          "leader": "shuxiachai/academic-commercialization-agent"
+        },
+        "Local AI": {
+          "repositories": 23,
+          "totalStars": 60560,
+          "star24h": 497,
+          "star7d": 8537,
+          "star30d": 17143,
+          "star90d": 35301,
+          "star365d": 60515,
+          "averageSignal": 69,
+          "averageAcceleration": 1.81,
+          "leader": "xerj-org/xerj"
+        },
+        "RAG": {
+          "repositories": 8,
+          "totalStars": 20745,
+          "star24h": 499,
+          "star7d": 7418,
+          "star30d": 11286,
+          "star90d": 14366,
+          "star365d": 17709,
+          "averageSignal": 71,
+          "averageAcceleration": 3.79,
+          "leader": "xerj-org/xerj"
+        },
+        "Computer Use": {
+          "repositories": 5,
+          "totalStars": 15766,
+          "star24h": 6,
+          "star7d": 466,
+          "star30d": 1157,
+          "star90d": 2425,
+          "star365d": 15766,
+          "averageSignal": 77,
+          "averageAcceleration": 10.48,
+          "leader": "ctoldigital/axuse"
+        },
+        "AI Image": {
+          "repositories": 3,
+          "totalStars": 17517,
+          "star24h": 16,
+          "star7d": 113,
+          "star30d": 432,
+          "star90d": 1549,
+          "star365d": 17516,
+          "averageSignal": 62,
+          "averageAcceleration": 1.06,
+          "leader": "YouMind-OpenLab/awesome-nano-banana-pro-prompts"
+        },
+        "AI Video": {
+          "repositories": 3,
+          "totalStars": 6301,
+          "star24h": 25,
+          "star7d": 154,
+          "star30d": 617,
+          "star90d": 2337,
+          "star365d": 6301,
+          "averageSignal": 62,
+          "averageAcceleration": 1.08,
+          "leader": "ArcReel/ArcReel"
+        }
+      },
+      "repositories": [
+        {
+          "fullName": "timoncool/speech-studio",
+          "stars": 47,
+          "star24h": 0,
+          "star7d": 45,
+          "star30d": 47,
+          "star90d": 47,
+          "star365d": 47,
+          "signal": 98,
+          "acceleration": 7.1429,
+          "categories": [
+            "Local AI"
+          ]
+        },
+        {
+          "fullName": "Sallyn0225/eidolon-sc",
+          "stars": 193,
+          "star24h": 48,
+          "star7d": 188,
+          "star30d": 193,
+          "star90d": 193,
+          "star365d": 193,
+          "signal": 98,
+          "acceleration": 19.3,
+          "categories": [
+            "RAG",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "ctoldigital/axuse",
+          "stars": 236,
+          "star24h": 0,
+          "star7d": 236,
+          "star30d": 236,
+          "star90d": 236,
+          "star365d": 236,
+          "signal": 97,
+          "acceleration": 48.2,
+          "categories": [
+            "Computer Use",
+            "Agent",
+            "MCP"
+          ]
+        },
+        {
+          "fullName": "xerj-org/xerj",
+          "stars": 12852,
+          "star24h": 370,
+          "star7d": 6960,
+          "star30d": 10589,
+          "star90d": 12814,
+          "star365d": 12853,
+          "signal": 96,
+          "acceleration": 2.7049,
+          "categories": [
+            "MCP",
+            "Coding",
+            "Local AI",
+            "RAG",
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "jiangkoumo/ego-decision-layer",
+          "stars": 27,
+          "star24h": 0,
+          "star7d": 22,
+          "star30d": 23,
+          "star90d": 27,
+          "star365d": 27,
+          "signal": 95,
+          "acceleration": 5.4,
+          "categories": [
+            "Local AI",
+            "Agent",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "touri-ai/touri",
+          "stars": 87,
+          "star24h": 2,
+          "star7d": 55,
+          "star30d": 87,
+          "star90d": 87,
+          "star365d": 87,
+          "signal": 85,
+          "acceleration": 1.6216,
+          "categories": [
+            "Computer Use",
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "timoncool/YuE2-Studio",
+          "stars": 1059,
+          "star24h": 47,
+          "star7d": 338,
+          "star30d": 1057,
+          "star90d": 1059,
+          "star365d": 1059,
+          "signal": 84,
+          "acceleration": 1.4913,
+          "categories": [
+            "Local AI"
+          ]
+        },
+        {
+          "fullName": "aipoch/open-science",
+          "stars": 5333,
+          "star24h": 24,
+          "star7d": 428,
+          "star30d": 1187,
+          "star90d": 4885,
+          "star365d": 5333,
+          "signal": 82,
+          "acceleration": 2.7935,
+          "categories": [
+            "Local AI",
+            "Agent",
+            "MCP"
+          ]
+        },
+        {
+          "fullName": "shuxiachai/academic-commercialization-agent",
+          "stars": 737,
+          "star24h": 70,
+          "star7d": 195,
+          "star30d": 296,
+          "star90d": 737,
+          "star365d": 737,
+          "signal": 81,
+          "acceleration": 1.9802,
+          "categories": [
+            "RAG",
+            "Agent",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "deskmind-ai/deskmind",
+          "stars": 114,
+          "star24h": 3,
+          "star7d": 55,
+          "star30d": 114,
+          "star90d": 114,
+          "star365d": 114,
+          "signal": 80,
+          "acceleration": 1.2766,
+          "categories": [
+            "Computer Use",
+            "Agent",
+            "LLM",
+            "Local AI"
+          ]
+        },
+        {
+          "fullName": "nikunjsingh93/Mochu-Local-AI-Assistant",
+          "stars": 21,
+          "star24h": 0,
+          "star7d": 10,
+          "star30d": 11,
+          "star90d": 13,
+          "star365d": 21,
+          "signal": 75,
+          "acceleration": 3,
+          "categories": [
+            "Local AI"
+          ]
+        },
+        {
+          "fullName": "ginlix-ai/LangAlpha",
+          "stars": 1906,
+          "star24h": 0,
+          "star7d": 90,
+          "star30d": 142,
+          "star90d": 338,
+          "star365d": 1906,
+          "signal": 74,
+          "acceleration": 6.3333,
+          "categories": [
+            "MCP",
+            "Coding",
+            "Agent",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "rlaope/oh-my-hermes",
+          "stars": 3542,
+          "star24h": 53,
+          "star7d": 164,
+          "star30d": 700,
+          "star90d": 3475,
+          "star365d": 3542,
+          "signal": 71,
+          "acceleration": 1.0368,
+          "categories": [
+            "Coding",
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "autonomous-ai/openharness",
+          "stars": 1338,
+          "star24h": 9,
+          "star7d": 81,
+          "star30d": 655,
+          "star90d": 1338,
+          "star365d": 1338,
+          "signal": 70,
+          "acceleration": 1.1622,
+          "categories": [
+            "Agent",
+            "Coding",
+            "MCP"
+          ]
+        },
+        {
+          "fullName": "lexmount/moli",
+          "stars": 19979,
+          "star24h": 113,
+          "star7d": 1370,
+          "star30d": 17831,
+          "star90d": 19979,
+          "star365d": 19979,
+          "signal": 70,
+          "acceleration": 0.2906,
+          "categories": [
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "whiteguo233/OpenBiliClaw",
+          "stars": 3532,
+          "star24h": 18,
+          "star7d": 88,
+          "star30d": 228,
+          "star90d": 2110,
+          "star365d": 3532,
+          "signal": 69,
+          "acceleration": 1.4308,
+          "categories": [
+            "Local AI",
+            "Agent",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "omnigent-ai/omnigent",
+          "stars": 10973,
+          "star24h": 32,
+          "star7d": 142,
+          "star30d": 851,
+          "star90d": 3339,
+          "star365d": 10973,
+          "signal": 68,
+          "acceleration": 0.8963,
+          "categories": [
+            "Coding",
+            "Agent",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "Gentleman-Programming/engram",
+          "stars": 7519,
+          "star24h": 23,
+          "star7d": 237,
+          "star30d": 790,
+          "star90d": 1900,
+          "star365d": 7519,
+          "signal": 68,
+          "acceleration": 1.1691,
+          "categories": [
+            "MCP",
+            "Coding",
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "JiangNanGenius/floe-agent",
+          "stars": 289,
+          "star24h": 0,
+          "star7d": 35,
+          "star30d": 173,
+          "star90d": 289,
+          "star365d": 289,
+          "signal": 67,
+          "acceleration": 1.0811,
+          "categories": [
+            "Coding",
+            "Local AI",
+            "Agent",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "adityaagarw/Pantheon",
+          "stars": 40,
+          "star24h": 0,
+          "star7d": 4,
+          "star30d": 40,
+          "star90d": 40,
+          "star365d": 40,
+          "signal": 67,
+          "acceleration": 1.8,
+          "categories": [
+            "Coding",
+            "Agent",
+            "MCP",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "ArcReel/ArcReel",
+          "stars": 5650,
+          "star24h": 24,
+          "star7d": 131,
+          "star30d": 535,
+          "star90d": 2079,
+          "star365d": 5650,
+          "signal": 67,
+          "acceleration": 1.0382,
+          "categories": [
+            "Agent",
+            "AI Video"
+          ]
+        },
+        {
+          "fullName": "OpenByteInc/QuantDinger",
+          "stars": 13003,
+          "star24h": 0,
+          "star7d": 195,
+          "star30d": 1048,
+          "star90d": 3166,
+          "star365d": 13003,
+          "signal": 66,
+          "acceleration": 0.7463,
+          "categories": [
+            "Agent",
+            "MCP"
+          ]
+        },
+        {
+          "fullName": "Orkas-AI/Orkas",
+          "stars": 2145,
+          "star24h": 0,
+          "star7d": 47,
+          "star30d": 143,
+          "star90d": 1571,
+          "star365d": 2145,
+          "signal": 66,
+          "acceleration": 1.1064,
+          "categories": [
+            "Agent",
+            "Coding",
+            "Local AI"
+          ]
+        },
+        {
+          "fullName": "zhouxiaoka/autoclip",
+          "stars": 9629,
+          "star24h": 0,
+          "star7d": 190,
+          "star30d": 924,
+          "star90d": 3491,
+          "star365d": 8972,
+          "signal": 65,
+          "acceleration": 1.0209,
+          "categories": [
+            "MCP",
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "NanmiCoder/cc-haha",
+          "stars": 15107,
+          "star24h": 0,
+          "star7d": 100,
+          "star30d": 502,
+          "star90d": 1766,
+          "star365d": 15107,
+          "signal": 65,
+          "acceleration": 0.7836,
+          "categories": [
+            "Local AI",
+            "Computer Use",
+            "Agent",
+            "MCP",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "hashgraph-online/hol-guard",
+          "stars": 963,
+          "star24h": 8,
+          "star7d": 54,
+          "star30d": 314,
+          "star90d": 546,
+          "star365d": 963,
+          "signal": 64,
+          "acceleration": 0.6629,
+          "categories": [
+            "Agent",
+            "MCP"
+          ]
+        },
+        {
+          "fullName": "aqm857886159/Nomi",
+          "stars": 594,
+          "star24h": 1,
+          "star7d": 21,
+          "star30d": 76,
+          "star90d": 232,
+          "star365d": 594,
+          "signal": 64,
+          "acceleration": 1.04,
+          "categories": [
+            "MCP",
+            "Local AI",
+            "AI Video",
+            "Agent",
+            "AI Image"
+          ]
+        },
+        {
+          "fullName": "KitionAI/kition",
+          "stars": 499,
+          "star24h": 0,
+          "star7d": 33,
+          "star30d": 177,
+          "star90d": 499,
+          "star365d": 499,
+          "signal": 64,
+          "acceleration": 0.7917,
+          "categories": [
+            "MCP",
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "xiufengsun/TokenTracker",
+          "stars": 2106,
+          "star24h": 0,
+          "star7d": 55,
+          "star30d": 419,
+          "star90d": 1043,
+          "star365d": 2105,
+          "signal": 64,
+          "acceleration": 0.8451,
+          "categories": [
+            "Local AI"
+          ]
+        },
+        {
+          "fullName": "kstevica/captain-claw",
+          "stars": 175,
+          "star24h": 1,
+          "star7d": 7,
+          "star30d": 11,
+          "star90d": 18,
+          "star365d": 175,
+          "signal": 63,
+          "acceleration": 1.7143,
+          "categories": [
+            "Coding",
+            "Local AI",
+            "Agent",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "YouMind-OpenLab/awesome-nano-banana-pro-prompts",
+          "stars": 13661,
+          "star24h": 15,
+          "star7d": 70,
+          "star30d": 234,
+          "star90d": 820,
+          "star365d": 13660,
+          "signal": 63,
+          "acceleration": 1.25,
+          "categories": [
+            "AI Image"
+          ]
+        },
+        {
+          "fullName": "Bike4Mind/bike4mind",
+          "stars": 90,
+          "star24h": 2,
+          "star7d": 3,
+          "star30d": 3,
+          "star90d": 30,
+          "star365d": 90,
+          "signal": 62,
+          "acceleration": 1.6,
+          "categories": [
+            "MCP",
+            "Local AI",
+            "RAG",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "caura-ai/caura",
+          "stars": 505,
+          "star24h": 2,
+          "star7d": 7,
+          "star30d": 32,
+          "star90d": 177,
+          "star365d": 505,
+          "signal": 62,
+          "acceleration": 1.3333,
+          "categories": [
+            "MCP",
+            "RAG",
+            "Agent",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "marcusquinn/aidevops",
+          "stars": 420,
+          "star24h": 0,
+          "star7d": 10,
+          "star30d": 23,
+          "star90d": 81,
+          "star365d": 420,
+          "signal": 62,
+          "acceleration": 2.1429,
+          "categories": [
+            "Coding",
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "Rich627/whatsapp-claude-plugin",
+          "stars": 110,
+          "star24h": 0,
+          "star7d": 6,
+          "star30d": 16,
+          "star90d": 58,
+          "star365d": 110,
+          "signal": 61,
+          "acceleration": 1.8333,
+          "categories": [
+            "MCP"
+          ]
+        },
+        {
+          "fullName": "converge-ai-labs/agent-foundation",
+          "stars": 222,
+          "star24h": 1,
+          "star7d": 20,
+          "star30d": 218,
+          "star90d": 222,
+          "star365d": 222,
+          "signal": 59,
+          "acceleration": 0.5208,
+          "categories": [
+            "Computer Use",
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "cortexkit/aft",
+          "stars": 330,
+          "star24h": 1,
+          "star7d": 6,
+          "star30d": 26,
+          "star90d": 120,
+          "star365d": 330,
+          "signal": 58,
+          "acceleration": 1.375,
+          "categories": [
+            "Agent",
+            "Coding",
+            "RAG"
+          ]
+        },
+        {
+          "fullName": "ModelEngine-Group/nexent",
+          "stars": 6007,
+          "star24h": 6,
+          "star7d": 58,
+          "star30d": 143,
+          "star90d": 273,
+          "star365d": 2970,
+          "signal": 58,
+          "acceleration": 1.05,
+          "categories": [
+            "RAG",
+            "Agent",
+            "MCP",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "sheeki03/tirith",
+          "stars": 2762,
+          "star24h": 0,
+          "star7d": 8,
+          "star30d": 34,
+          "star90d": 159,
+          "star365d": 2762,
+          "signal": 58,
+          "acceleration": 1.4444,
+          "categories": [
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "apache/maka",
+          "stars": 5866,
+          "star24h": 0,
+          "star7d": 67,
+          "star30d": 296,
+          "star90d": 5006,
+          "star365d": 5866,
+          "signal": 58,
+          "acceleration": 0.576,
+          "categories": [
+            "Agent",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "entireio/cli",
+          "stars": 5199,
+          "star24h": 0,
+          "star7d": 20,
+          "star30d": 105,
+          "star90d": 418,
+          "star365d": 5199,
+          "signal": 58,
+          "acceleration": 1,
+          "categories": [
+            "Coding",
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "off-grid-ai/OGAM",
+          "stars": 3262,
+          "star24h": 0,
+          "star7d": 22,
+          "star30d": 122,
+          "star90d": 497,
+          "star365d": 3262,
+          "signal": 58,
+          "acceleration": 0.9,
+          "categories": [
+            "MCP",
+            "Local AI",
+            "LLM",
+            "AI Image"
+          ]
+        },
+        {
+          "fullName": "silverstein/minutes",
+          "stars": 1563,
+          "star24h": 1,
+          "star7d": 13,
+          "star30d": 74,
+          "star90d": 205,
+          "star365d": 1563,
+          "signal": 58,
+          "acceleration": 1,
+          "categories": [
+            "Local AI",
+            "Agent",
+            "MCP"
+          ]
+        },
+        {
+          "fullName": "vastsa/PI-Desktop",
+          "stars": 7125,
+          "star24h": 29,
+          "star7d": 249,
+          "star30d": 1958,
+          "star90d": 7095,
+          "star365d": 7096,
+          "signal": 58,
+          "acceleration": 0.6597,
+          "categories": [
+            "Local AI",
+            "Agent",
+            "MCP",
+            "Coding"
+          ]
+        },
+        {
+          "fullName": "thetahealth/mirobody",
+          "stars": 1387,
+          "star24h": 0,
+          "star7d": 13,
+          "star30d": 53,
+          "star90d": 338,
+          "star365d": 1387,
+          "signal": 58,
+          "acceleration": 1.2857,
+          "categories": [
+            "Local AI",
+            "MCP",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "IvanMurzak/Godot-MCP",
+          "stars": 302,
+          "star24h": 0,
+          "star7d": 13,
+          "star30d": 51,
+          "star90d": 118,
+          "star365d": 302,
+          "signal": 57,
+          "acceleration": 0.9,
+          "categories": [
+            "MCP",
+            "Coding"
+          ]
+        },
+        {
+          "fullName": "Tuskira/ai-agent-gateway",
+          "stars": 81,
+          "star24h": 0,
+          "star7d": 4,
+          "star30d": 81,
+          "star90d": 81,
+          "star365d": 81,
+          "signal": 56,
+          "acceleration": 1.125,
+          "categories": [
+            "Agent",
+            "MCP",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "townsendmerino/goinfer",
+          "stars": 21,
+          "star24h": 0,
+          "star7d": 2,
+          "star30d": 6,
+          "star90d": 16,
+          "star365d": 21,
+          "signal": 56,
+          "acceleration": 1.1667,
+          "categories": [
+            "Local AI",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "awslabs/aidlc-workflows",
+          "stars": 5451,
+          "star24h": 20,
+          "star7d": 126,
+          "star30d": 703,
+          "star90d": 1781,
+          "star365d": 5451,
+          "signal": 56,
+          "acceleration": 0.5282,
+          "categories": [
+            "Coding"
+          ]
+        },
+        {
+          "fullName": "jeremylongshore/tons-of-skills-marketplace",
+          "stars": 2858,
+          "star24h": 0,
+          "star7d": 18,
+          "star30d": 90,
+          "star90d": 338,
+          "star365d": 2723,
+          "signal": 55,
+          "acceleration": 0.8214,
+          "categories": [
+            "MCP",
+            "Agent",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "zereight/gitlab-mcp",
+          "stars": 2060,
+          "star24h": 0,
+          "star7d": 16,
+          "star30d": 65,
+          "star90d": 232,
+          "star365d": 1415,
+          "signal": 55,
+          "acceleration": 1.2353,
+          "categories": [
+            "MCP",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "snapotter-hq/SnapOtter",
+          "stars": 2830,
+          "star24h": 1,
+          "star7d": 16,
+          "star30d": 117,
+          "star90d": 765,
+          "star365d": 2830,
+          "signal": 55,
+          "acceleration": 0.6364,
+          "categories": [
+            "Local AI"
+          ]
+        },
+        {
+          "fullName": "YouMind-OpenLab/awesome-grok-imagine-prompts",
+          "stars": 57,
+          "star24h": 0,
+          "star7d": 2,
+          "star30d": 6,
+          "star90d": 26,
+          "star365d": 57,
+          "signal": 55,
+          "acceleration": 1.1667,
+          "categories": [
+            "AI Video"
+          ]
+        },
+        {
+          "fullName": "modelcontextprotocol/modelcontextprotocol",
+          "stars": 9505,
+          "star24h": 16,
+          "star7d": 52,
+          "star30d": 246,
+          "star90d": 868,
+          "star365d": 3621,
+          "signal": 55,
+          "acceleration": 1.0179,
+          "categories": [
+            "MCP"
+          ]
+        },
+        {
+          "fullName": "danyuchn/pii-guard",
+          "stars": 251,
+          "star24h": 0,
+          "star7d": 2,
+          "star30d": 105,
+          "star90d": 215,
+          "star365d": 251,
+          "signal": 54,
+          "acceleration": 1.4,
+          "categories": [
+            "Local AI",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "avibe-bot/avibe",
+          "stars": 630,
+          "star24h": 0,
+          "star7d": 6,
+          "star30d": 125,
+          "star90d": 152,
+          "star365d": 614,
+          "signal": 54,
+          "acceleration": 1.2222,
+          "categories": [
+            "Local AI",
+            "Agent",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "TanStack/ai",
+          "stars": 3213,
+          "star24h": 0,
+          "star7d": 16,
+          "star30d": 93,
+          "star90d": 329,
+          "star365d": 3212,
+          "signal": 54,
+          "acceleration": 0.7,
+          "categories": [
+            "Agent",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "netresearch/claude-code-marketplace",
+          "stars": 65,
+          "star24h": 0,
+          "star7d": 2,
+          "star30d": 5,
+          "star90d": 20,
+          "star365d": 65,
+          "signal": 54,
+          "acceleration": 1.4,
+          "categories": [
+            "Coding",
+            "Agent"
+          ]
+        },
+        {
+          "fullName": "dyoshikawa/rulesync",
+          "stars": 1541,
+          "star24h": 0,
+          "star7d": 19,
+          "star30d": 85,
+          "star90d": 293,
+          "star365d": 1161,
+          "signal": 54,
+          "acceleration": 1.0435,
+          "categories": [
+            "MCP",
+            "Coding",
+            "LLM"
+          ]
+        },
+        {
+          "fullName": "IHUI-INF-AI/IHUI-AI",
+          "stars": 31,
+          "star24h": 0,
+          "star7d": 1,
+          "star30d": 4,
+          "star90d": 22,
+          "star365d": 31,
+          "signal": 54,
+          "acceleration": 1,
+          "categories": [
+            "RAG",
+            "Agent",
+            "MCP",
+            "LLM"
           ]
         }
       ]
